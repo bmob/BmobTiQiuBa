@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view alpha="0.79999999999999982" contentMode="scaleToFill" id="iN0-l3-epB" customClass="UserTipView">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user_tip01.png" translatesAutoresizingMaskIntoConstraints="NO" id="8yM-ac-Skn">
+                    <rect key="frame" x="127" y="32" width="176" height="59"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="176" id="zBZ-Kb-Y3O"/>
+                        <constraint firstAttribute="height" constant="59" id="zeh-n5-yPS"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user_tip02.png" translatesAutoresizingMaskIntoConstraints="NO" id="gut-w4-wbp">
+                    <rect key="frame" x="18" y="156" width="284" height="172"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="172" id="846-tC-oMX"/>
+                        <constraint firstAttribute="width" constant="284" id="VWS-a1-Nic"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user_tip03.png" translatesAutoresizingMaskIntoConstraints="NO" id="MEj-9p-RCR">
+                    <rect key="frame" x="66" y="406" width="122" height="57"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="122" id="Abo-ZU-keL"/>
+                        <constraint firstAttribute="height" constant="57" id="K6w-AU-jnb"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="MEj-9p-RCR" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="66" id="4w0-I5-fve"/>
+                <constraint firstItem="8yM-ac-Skn" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="127" id="NID-0x-MlZ"/>
+                <constraint firstItem="8yM-ac-Skn" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="32" id="Z9n-KB-Shd"/>
+                <constraint firstItem="gut-w4-wbp" firstAttribute="top" secondItem="8yM-ac-Skn" secondAttribute="bottom" constant="65" id="cE7-vP-uSf"/>
+                <constraint firstAttribute="centerX" secondItem="gut-w4-wbp" secondAttribute="centerX" id="ggB-he-b5C"/>
+                <constraint firstAttribute="bottom" secondItem="MEj-9p-RCR" secondAttribute="bottom" constant="17" id="ke2-yI-zEf"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="140" y="154"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="user_tip01.png" width="176" height="59"/>
+        <image name="user_tip02.png" width="284" height="171"/>
+        <image name="user_tip03.png" width="122" height="57"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

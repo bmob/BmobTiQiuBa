@@ -1,0 +1,62 @@
+PODS:
+  - AFNetworking (2.2.4):
+    - AFNetworking/NSURLConnection (= 2.2.4)
+    - AFNetworking/NSURLSession (= 2.2.4)
+    - AFNetworking/Reachability (= 2.2.4)
+    - AFNetworking/Security (= 2.2.4)
+    - AFNetworking/Serialization (= 2.2.4)
+    - AFNetworking/UIKit (= 2.2.4)
+  - AFNetworking/NSURLConnection (2.2.4):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/NSURLSession (2.2.4):
+    - AFNetworking/NSURLConnection
+  - AFNetworking/Reachability (2.2.4)
+  - AFNetworking/Security (2.2.4)
+  - AFNetworking/Serialization (2.2.4)
+  - AFNetworking/UIKit (2.2.4):
+    - AFNetworking/NSURLConnection
+    - AFNetworking/NSURLSession
+  - CocoaLumberjack (1.8.1):
+    - CocoaLumberjack/Extensions (= 1.8.1)
+  - CocoaLumberjack/Core (1.8.1)
+  - CocoaLumberjack/Extensions (1.8.1):
+    - CocoaLumberjack/Core
+  - CocoaSecurity (1.2.4)
+  - FMDB (2.5):
+    - FMDB/standard (= 2.5)
+  - FMDB/common (2.5)
+  - FMDB/standard (2.5):
+    - FMDB/common
+  - iAppInfos (0.0.7)
+  - MBProgressHUD (0.9.1)
+  - ODRefreshControl (1.1.0)
+  - SDWebImage (3.7.2):
+    - SDWebImage/Core (= 3.7.2)
+  - SDWebImage/Core (3.7.2)
+  - UMengAnalytics-NO-IDFA (3.4.7)
+
+DEPENDENCIES:
+  - AFNetworking (~> 2.2.1)
+  - CocoaLumberjack (~> 1.8.1)
+  - CocoaSecurity (~> 1.2.3)
+  - FMDB (~> 2.3)
+  - iAppInfos (~> 0.0.6)
+  - MBProgressHUD (~> 0.8)
+  - ODRefreshControl (~> 1.1.0)
+  - SDWebImage (~> 3.7.1)
+  - UMengAnalytics-NO-IDFA
+
+SPEC CHECKSUMS:
+  AFNetworking: caca0799b310f0c3bf1fc1af45145fc96972bcab
+  CocoaLumberjack: 555162681b9c20a271909b235c43f6bbd5d512e1
+  CocoaSecurity: d288a6f87e0f363823d2cb83e753814a6944f71a
+  FMDB: 96e8f1bcc1329e269330f99770ad4285d9003e52
+  iAppInfos: 7c6aabf78324d4c82fc1bb0c6ae354ea807b187b
+  MBProgressHUD: c47f2c166c126cf2ce36498d80f33e754d4e93ad
+  ODRefreshControl: 4c4c413bf70d2ea0c02a28ac0a0b3b4bf4dbfdea
+  SDWebImage: 71b7cdc1d1721d6a82ed62889030225f2c249e29
+  UMengAnalytics-NO-IDFA: 68a71671c10067315339fc3fd1283be416f02a8b
+
+COCOAPODS: 0.36.3

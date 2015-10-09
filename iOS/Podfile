@@ -1,0 +1,17 @@
+platform :ios, '6.0'
+
+# Data
+pod 'AFNetworking', '~> 2.2.1'
+pod 'CocoaLumberjack', '~> 1.8.1'
+#pod 'CrashlyticsFramework', '~> 2.1.7'
+pod 'CocoaSecurity', '~> 1.2.3'
+pod 'iAppInfos', '~> 0.0.6'
+pod 'SDWebImage', '~> 3.7.1'
+pod 'FMDB', '~> 2.3'
+#pod 'MagicalRecord', '~> 2.2'
+# UI
+pod 'MBProgressHUD', '~> 0.8'
+pod 'ODRefreshControl', '~> 1.1.0'
+
+#umeng
+pod 'UMengAnalytics-NO-IDFA'

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view alpha="0.79999999999999982" contentMode="scaleToFill" id="iN0-l3-epB" customClass="GamescoreTipView">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gamescore_tip01.png" translatesAutoresizingMaskIntoConstraints="NO" id="aBJ-h5-YNv">
+                    <rect key="frame" x="120" y="135" width="191" height="97"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="97" id="bQ4-i6-Wf1"/>
+                        <constraint firstAttribute="width" constant="191" id="kDk-U0-2mw"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gamescore_tip02.png" translatesAutoresizingMaskIntoConstraints="NO" id="dQM-38-ome">
+                    <rect key="frame" x="57" y="298" width="235" height="65"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="235" id="doa-A8-DEo"/>
+                        <constraint firstAttribute="height" constant="65" id="jS3-dG-0rk"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gamescore_tip03.png" translatesAutoresizingMaskIntoConstraints="NO" id="YsB-gx-Fwc">
+                    <rect key="frame" x="15" y="400" width="267" height="74"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="74" id="ZEt-mH-0nq"/>
+                        <constraint firstAttribute="width" constant="267" id="iqH-yk-wSC"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="aBJ-h5-YNv" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="135" id="5QI-64-gxI"/>
+                <constraint firstItem="dQM-38-ome" firstAttribute="top" secondItem="aBJ-h5-YNv" secondAttribute="bottom" constant="66" id="CMF-s2-IiY"/>
+                <constraint firstItem="aBJ-h5-YNv" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="120" id="Dbj-T2-JWP"/>
+                <constraint firstItem="YsB-gx-Fwc" firstAttribute="top" secondItem="dQM-38-ome" secondAttribute="bottom" constant="37" id="DhX-oh-WPV"/>
+                <constraint firstItem="YsB-gx-Fwc" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="heg-Vu-TSG"/>
+                <constraint firstItem="dQM-38-ome" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="57" id="qeN-7X-agO"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+            <point key="canvasLocation" x="566" y="262"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="gamescore_tip01.png" width="191" height="97"/>
+        <image name="gamescore_tip02.png" width="235" height="65"/>
+        <image name="gamescore_tip03.png" width="266" height="74"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

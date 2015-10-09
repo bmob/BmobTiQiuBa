@@ -1,0 +1,1 @@
+../../../iAppInfos/iAppInfos/iAppInfos/iAppInfos/JMOLogMacro.h
