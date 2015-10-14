@@ -1,0 +1,63 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+	<style name="MyDialog" parent="@android:Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/white</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+	<style name="text_28_989b9f">
+	    <item name="android:textSize">14sp</item>
+		<item name="android:textColor">#989b9f</item>
+		<item name="android:singleLine">true</item>
+		<item name="android:ellipsize">end</item>
+	</style>
+	<style name="text_30_848587">
+	    <item name="android:textSize">16sp</item>
+		<item name="android:textColor">#848587</item>
+	</style>
+	<style name="text_75_f17600">
+	    <item name="android:textSize">30sp</item>
+		<item name="android:textColor">#f17600</item>
+	</style>
+	<style name="text_30_num">
+	    <item name="android:textSize">16sp</item>
+		<item name="android:textColor">#3e454d</item>
+	</style>
+	<style name="text_36_272f38">
+	    <item name="android:textSize">18sp</item>
+		<item name="android:textColor">#3e454d</item>
+	</style>
+	<style name="text_26_848587">
+	    <item name="android:textSize">14sp</item>
+		<item name="android:textColor">#848587</item>
+	</style>
+	<style name="text_28_272f38">
+	    <item name="android:textSize">16sp</item>
+		<item name="android:textColor">#272f38</item>
+	</style>
+	<style name="text_14_272f38">
+	    <item name="android:textSize">14sp</item>
+		<item name="android:textColor">#272f38</item>
+	</style>
+	<style name="text_60_272f38">
+	    <item name="android:textSize">22sp</item>
+		<item name="android:textColor">#272f38</item>
+	</style>
+</resources>

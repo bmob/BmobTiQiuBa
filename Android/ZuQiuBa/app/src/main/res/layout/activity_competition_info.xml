@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <!--<ScrollView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:fillViewport="true"-->
+        <!--android:scrollbars="none">-->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/top_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_top_info"
+                android:paddingBottom="8dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingTop="8dp">
+
+                <TextView
+                    android:id="@+id/compe_site"
+                    style="@style/text_28_989b9f"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:drawableLeft="@drawable/nearby_icon"
+                    android:drawablePadding="4dp"
+                    android:gravity="center"
+                    android:text="比赛地点" />
+
+                <TextView
+                    android:id="@+id/compe_time"
+                    style="@style/text_28_989b9f"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:gravity="center"
+                    android:text="比赛时间" />
+
+                <TextView
+                    android:id="@+id/compe_nature"
+                    style="@style/text_28_989b9f"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center"
+                    android:text="小组赛" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/bg_desk"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="56dp"
+                android:background="@drawable/bg_line_up"
+                android:orientation="horizontal"></LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/two_team_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/top_info">
+
+                <RelativeLayout
+                    android:id="@+id/home_team_info"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/vs_point_home"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginTop="30dp"
+                        android:background="@drawable/bg_vs_point"
+                        android:gravity="center_horizontal|top"
+                        android:text="0"
+                        android:textColor="#FFFFFF"
+                        android:textSize="46sp" />
+
+                    <TextView
+                        android:id="@+id/vs_name_home"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@+id/vs_point_home"
+                        android:gravity="center"
+                        android:text="主队"
+                        android:singleLine="true"
+                        android:textColor="#3e454d"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/vs_lineup_home"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@id/vs_point_home"
+                        android:layout_centerHorizontal="true"
+                        android:drawableLeft="@drawable/icon_lineup"
+                        android:drawablePadding="4dp"
+                        android:gravity="center"
+                        android:text="阵容"
+                        android:textSize="16sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/opponent_team_info"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/vs_point_opponent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginTop="30dp"
+                        android:background="@drawable/bg_vs_point"
+                        android:gravity="center_horizontal|top"
+                        android:text="0"
+                        android:textColor="#FFFFFF"
+                        android:textSize="46sp" />
+
+                    <TextView
+                        android:id="@+id/vs_name_opponent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/vs_point_opponent"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:text="客队"
+                        android:singleLine="true"
+                        android:textColor="#3e454d"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/vs_lineup_opponent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@id/vs_point_opponent"
+                        android:layout_centerHorizontal="true"
+                        android:drawableLeft="@drawable/icon_lineup"
+                        android:drawablePadding="4dp"
+                        android:gravity="center"
+                        android:text="阵容"
+                        android:textSize="16sp" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/my_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/bg_desk"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp">
+
+                <TextView
+                    android:id="@+id/my_name"
+                    style="@style/text_36_272f38"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="煤球王" />
+
+                <ImageView
+                    android:id="@+id/shot_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/icon_shot_price" />
+
+                <ImageView
+                    android:id="@+id/pass_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginRight="8dp"
+                    android:layout_toLeftOf="@id/shot_price"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/icon_pass_price" />
+
+                <Button
+                    android:id="@+id/attend"
+                    android:layout_width="70dp"
+                    android:layout_height="59dp"
+                    android:layout_below="@id/my_name"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/bg_ball_number"
+                    android:gravity="center"
+                    android:padding="16dp"
+                    android:text="登场"
+                    android:textColor="#989b9f"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/my_shot"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/my_name"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_toRightOf="@id/attend"
+                    android:background="@drawable/bg_ball_number"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textColor="@color/forget_pwd_tips"
+                    android:textSize="40sp" />
+
+                <TextView
+                    android:id="@+id/my_shot_tips"
+                    style="@style/text_28_989b9f"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@id/my_shot"
+                    android:layout_alignRight="@id/my_shot"
+                    android:layout_below="@id/my_shot"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center_horizontal"
+                    android:text="进球" />
+
+
+                <TextView
+                    android:id="@+id/my_pass"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/my_name"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_toRightOf="@id/my_shot"
+                    android:background="@drawable/bg_ball_number"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textColor="@color/forget_pwd_tips"
+                    android:textSize="40sp" />
+
+                <TextView
+                    android:id="@+id/my_pass_tips"
+                    style="@style/text_28_989b9f"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@id/my_pass"
+                    android:layout_alignRight="@id/my_pass"
+                    android:layout_below="@id/my_pass"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center_horizontal"
+                    android:text="助攻" />
+
+                <TextView
+                    android:id="@+id/my_avg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/my_name"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_toRightOf="@id/my_pass"
+                    android:background="@drawable/bg_avg_number"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="0.0"
+                    android:textColor="@color/forget_pwd_tips"
+                    android:textSize="40sp" />
+
+                <TextView
+                    android:id="@+id/my_avg_tips"
+                    style="@style/text_28_989b9f"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@id/my_avg"
+                    android:layout_alignRight="@id/my_avg"
+                    android:layout_below="@id/my_pass"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center_horizontal"
+                    android:text="平均分" />
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/my_diviver"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_below="@id/my_info"
+                android:layout_marginTop="8dp"
+                android:background="#989b9f" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/rl_ydy1"
+                android:visibility="gone"
+                android:background="@color/transparent_background">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginLeft="150dp"
+                    android:background="@drawable/bs1"></ImageView>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/bs2"></ImageView>
+                </RelativeLayout>
+
+        </RelativeLayout>
+        <!--</ScrollView>-->
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1.4">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:orientation="horizontal">
+
+            <ListView
+                android:id="@+id/personal_argue_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:cacheColorHint="#00000000"></ListView>
+
+            <ListView
+                android:id="@+id/kd_score_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:cacheColorHint="#00000000"></ListView>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/my_share"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="24dp"
+            android:layout_marginRight="24dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/share" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/rl_ydy2"
+        android:visibility="gone"
+        android:background="@color/transparent_background">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/bs3"></ImageView>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/iv_i_know"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="20dp"
+            android:background="@drawable/grzx4"></ImageView>
+        </RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="#ffffff"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/paiming"
+            android:layout_width="56dp"
+            android:layout_height="wrap_content"
+            android:paddingBottom="4dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:paddingTop="4dp"
+            android:text="排名"
+            android:gravity="center"
+            android:textColor="#aaaaaa"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:id="@+id/middle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+			<View 
+	        android:layout_width="1px"
+	        android:layout_height="match_parent"
+	        android:background="@color/bg_dan_hui"
+	        />
+            <TextView
+                android:id="@+id/qiuyuan"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="球员"
+                android:textColor="#aaaaaa"
+                android:textSize="14sp" />
+			<View 
+	        android:layout_width="1px"
+	        android:layout_height="match_parent"
+	        android:background="@color/bg_dan_hui"
+	        />
+            <TextView
+                android:id="@+id/qiudui"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="球队"
+                android:textColor="#aaaaaa"
+                android:textSize="14sp" />
+			<View 
+	        android:layout_width="1px"
+	        android:layout_height="match_parent"
+	        android:background="@color/bg_dan_hui"
+	        />
+            <TextView
+                android:id="@+id/jinqiu"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="进球"
+                android:textColor="#aaaaaa"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </LinearLayout>
+	<ListView 
+	    android:id="@+id/sheshou_list"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:cacheColorHint="#00000000"
+	    android:divider="@color/bg_dan_hui"
+	    android:dividerHeight="1px"
+	    android:headerDividersEnabled="true"
+	    ></ListView>
+</LinearLayout>

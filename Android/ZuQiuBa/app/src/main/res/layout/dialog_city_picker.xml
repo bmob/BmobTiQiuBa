@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/picker_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="选择城市"
+        android:textSize="16sp"
+        android:textColor="@color/forget_pwd_tips"
+        />
+    <View
+        android:id="@+id/picker_diviver"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_below="@id/picker_title"
+        android:layout_marginTop="8dp"
+        android:background="@color/forget_pwd_tips"
+        />
+
+    <cn.bmob.zuqiu.view.views.CityPicker
+        android:id="@+id/cityPicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/picker_diviver"
+        android:layout_marginTop="16dp"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/cityPicker"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp">
+        <Button
+            android:id="@+id/date_commit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/btn_yellow"
+            android:text="确定"
+            android:padding="8dp"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            />
+        <Button
+            android:id="@+id/btn_cancel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_black"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:text="取消"
+            android:padding="8dp"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            />
+    </LinearLayout>
+</RelativeLayout>

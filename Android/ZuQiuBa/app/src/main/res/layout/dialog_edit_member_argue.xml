@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#FFFFFF"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/edit_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:padding="8dp"
+        android:text="编辑"
+        android:textColor="#000000"
+        android:textSize="16sp" />
+
+    <View
+        android:id="@+id/diviver"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/forget_pwd_tips" />
+
+    <LinearLayout
+        android:id="@+id/argue1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/goals_tips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:padding="8dp"
+            android:text="进球:"
+            android:textColor="#000000"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/goals_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp"
+            android:hint="请输入进球数"
+            android:textSize="16sp"
+            android:inputType="number"
+             />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/argue2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp"
+             >
+
+            <TextView
+                android:id="@+id/assists_tips"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:padding="8dp"
+                android:text="助攻:"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/assists_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="8dp"
+                android:hint="请输入助攻数"
+                android:textSize="16sp" 
+                android:inputType="number"
+                />
+        </LinearLayout>
+        <View
+	        android:id="@+id/diviver_two"
+	        android:layout_width="match_parent"
+	        android:layout_height="1px"
+	        android:background="@color/forget_pwd_tips"
+	        android:layout_marginTop="8dp"
+	         />
+        <LinearLayout
+            android:id="@+id/argue3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+             >
+
+            <TextView
+                android:id="@+id/edit_cancel"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:padding="8dp"
+                android:text="取消"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:gravity="center" />
+			<TextView
+                android:id="@+id/edit_ok"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:padding="8dp"
+                android:text="确定"
+                android:textColor="@color/forget_pwd_tips"
+                android:textSize="16sp" 
+                android:gravity="center" 
+                />
+           
+        </LinearLayout>
+</LinearLayout>

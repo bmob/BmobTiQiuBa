@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_dan_hui"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/fragment_actionbar"
+        layout="@layout/actionbar" />
+
+    <RelativeLayout
+        android:id="@+id/search_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dip"
+        android:background="@drawable/bg_search_league" >
+
+        <cn.bmob.zuqiu.view.views.DeletableEditText
+            android:id="@+id/league_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_search_league_input"
+            android:hint="搜索赛事名称或代码"
+            android:drawableLeft="@drawable/search_icon_left"
+            android:drawableRight="@drawable/icon_search_delete"
+            android:drawablePadding="4dip"
+            android:padding="6dp"
+             />
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/search_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:cacheColorHint="#00000000"
+        android:scrollbars="none"
+        android:visibility="gone"
+        android:dividerHeight="1px"
+        android:divider="@color/bg_dan_hui"
+        >
+    </ListView>
+
+    <LinearLayout
+        android:id="@+id/layout_other"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+        <LinearLayout
+            android:id="@+id/saishi_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="#FFFFFF" >
+
+            <TextView
+                android:id="@+id/saishi_info_tips"
+                style="@style/text_28_272f38"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/zhanji_bg"
+                android:drawableTop="@drawable/bg_saishi"
+                android:gravity="center_horizontal"
+                android:padding="20dp"
+                android:text="赛事信息" />
+
+            <LinearLayout
+                android:id="@+id/saishi_tips"
+                android:layout_width="0dp"
+                android:layout_weight="1.0"
+                android:layout_height="match_parent"
+                android:gravity="center|left"
+                android:layout_centerVertical="true"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/your_tips"
+                    style="@style/text_28_989b9f"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:text="您正在参与" />
+
+                <TextView
+                    android:id="@+id/saishi_name"
+                    style="@style/text_36_272f38"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="8dp"
+                    />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:drawableLeft="@drawable/right_arrow"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/nearby_league"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:textColor="#989b9f"
+            android:textSize="16sp"
+            android:text="附近的赛事"
+            android:background="@drawable/bg_nearby_team"
+            android:drawableLeft="@drawable/nearby_icon"
+            android:drawablePadding="4dp"
+            android:padding="4dp"
+            android:paddingLeft="16dp"
+            />
+
+        <ListView
+            android:id="@+id/league_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:cacheColorHint="#00000000"
+            android:scrollbars="none"
+            android:dividerHeight="1px"
+            android:divider="@color/bg_dan_hui"
+            >
+        </ListView>
+
+        </LinearLayout>
+
+
+</LinearLayout>

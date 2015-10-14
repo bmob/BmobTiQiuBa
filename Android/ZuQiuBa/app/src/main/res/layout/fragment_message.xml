@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="48dp"
+    android:background="@drawable/bg_login"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/fragment_actionbar"
+        layout="@layout/actionbar" />
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/msg_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <ListView
+            android:id="@+id/msg_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:cacheColorHint="#00000000"
+            android:divider="#00000000"
+            android:dividerHeight="16dp"
+            android:visibility="visible" >
+        </ListView>
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+</LinearLayout>

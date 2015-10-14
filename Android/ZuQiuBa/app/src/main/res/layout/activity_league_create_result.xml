@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:padding="16dp"
+    android:background="#FFFFFF"
+    >
+
+    <TextView
+        android:id="@+id/league_leading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        />
+	<Button
+	    android:id="@+id/league_continue"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_marginTop="24dp"
+		android:paddingTop="8dp"
+		android:paddingBottom="8dp"
+	    android:text="@string/league_continue"
+	    android:textColor="@android:color/white"
+	    android:textSize="18sp"
+	    android:gravity="center"
+	    android:background="@drawable/btn_yellow"
+	    />
+</LinearLayout>

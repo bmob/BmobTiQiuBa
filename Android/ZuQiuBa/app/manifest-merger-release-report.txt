@@ -1,0 +1,685 @@
+-- Merging decision tree log ---
+manifest
+ADDED from AndroidManifest.xml:2:1
+	xmlns:android
+		ADDED from AndroidManifest.xml:2:11
+	package
+		ADDED from AndroidManifest.xml:3:5
+		INJECTED from AndroidManifest.xml:0:0
+		INJECTED from AndroidManifest.xml:0:0
+	android:versionName
+		ADDED from AndroidManifest.xml:5:5
+	android:versionCode
+		ADDED from AndroidManifest.xml:4:5
+		INJECTED from AndroidManifest.xml:0:0
+		INJECTED from AndroidManifest.xml:0:0
+uses-sdk
+ADDED from AndroidManifest.xml:7:5
+MERGED from com.android.support:support-v4:21.0.3:15:5
+	android:targetSdkVersion
+		ADDED from AndroidManifest.xml:9:9
+		INJECTED from AndroidManifest.xml:0:0
+		INJECTED from AndroidManifest.xml:0:0
+	android:minSdkVersion
+		ADDED from AndroidManifest.xml:8:9
+		INJECTED from AndroidManifest.xml:0:0
+		INJECTED from AndroidManifest.xml:0:0
+uses-permission#android.permission.INTERNET
+ADDED from AndroidManifest.xml:11:5
+	android:name
+		ADDED from AndroidManifest.xml:11:22
+uses-permission#android.permission.READ_LOGS
+ADDED from AndroidManifest.xml:12:5
+	android:name
+		ADDED from AndroidManifest.xml:12:22
+uses-permission#android.permission.READ_PHONE_STATE
+ADDED from AndroidManifest.xml:14:5
+	android:name
+		ADDED from AndroidManifest.xml:14:22
+uses-permission#android.permission.WAKE_LOCK
+ADDED from AndroidManifest.xml:15:5
+	android:name
+		ADDED from AndroidManifest.xml:15:22
+uses-permission#android.permission.RECEIVE_BOOT_COMPLETED
+ADDED from AndroidManifest.xml:16:5
+	android:name
+		ADDED from AndroidManifest.xml:16:22
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from AndroidManifest.xml:17:5
+	android:name
+		ADDED from AndroidManifest.xml:17:22
+uses-permission#android.permission.WRITE_SETTINGS
+ADDED from AndroidManifest.xml:18:5
+	android:name
+		ADDED from AndroidManifest.xml:18:22
+uses-permission#android.permission.VIBRATE
+ADDED from AndroidManifest.xml:19:5
+	android:name
+		ADDED from AndroidManifest.xml:19:22
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from AndroidManifest.xml:20:5
+	android:name
+		ADDED from AndroidManifest.xml:20:22
+uses-permission#android.permission.ACCESS_WIFI_STATE
+ADDED from AndroidManifest.xml:21:5
+	android:name
+		ADDED from AndroidManifest.xml:21:22
+uses-permission#android.permission.RECEIVE_USER_PRESENT
+ADDED from AndroidManifest.xml:22:5
+	android:name
+		ADDED from AndroidManifest.xml:22:22
+uses-permission#android.permission.ACCESS_DOWNLOAD_MANAGER
+ADDED from AndroidManifest.xml:23:5
+	android:name
+		ADDED from AndroidManifest.xml:23:22
+uses-permission#android.permission.DOWNLOAD_WITHOUT_NOTIFICATION
+ADDED from AndroidManifest.xml:24:5
+	android:name
+		ADDED from AndroidManifest.xml:24:22
+uses-permission#android.permission.DISABLE_KEYGUARD
+ADDED from AndroidManifest.xml:25:5
+	android:name
+		ADDED from AndroidManifest.xml:25:22
+uses-permission#android.permission.ACCESS_COARSE_LOCATION
+ADDED from AndroidManifest.xml:26:5
+	android:name
+		ADDED from AndroidManifest.xml:26:22
+application
+ADDED from AndroidManifest.xml:28:5
+MERGED from com.android.support:support-v4:21.0.3:16:5
+	android:label
+		ADDED from AndroidManifest.xml:32:9
+	android:allowBackup
+		ADDED from AndroidManifest.xml:30:9
+	android:icon
+		ADDED from AndroidManifest.xml:31:9
+	android:name
+		ADDED from AndroidManifest.xml:29:9
+activity#cn.bmob.zuqiu.ui.SplashActivity2
+ADDED from AndroidManifest.xml:33:9
+	android:screenOrientation
+		ADDED from AndroidManifest.xml:36:13
+	android:label
+		ADDED from AndroidManifest.xml:35:13
+	android:theme
+		ADDED from AndroidManifest.xml:37:13
+	android:name
+		ADDED from AndroidManifest.xml:34:13
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from AndroidManifest.xml:38:13
+action#android.intent.action.MAIN
+ADDED from AndroidManifest.xml:39:17
+	android:name
+		ADDED from AndroidManifest.xml:39:25
+category#android.intent.category.LAUNCHER
+ADDED from AndroidManifest.xml:41:17
+	android:name
+		ADDED from AndroidManifest.xml:41:27
+activity#cn.bmob.zuqiu.ui.LoginActivity
+ADDED from AndroidManifest.xml:44:9
+	android:screenOrientation
+		ADDED from AndroidManifest.xml:46:13
+	android:theme
+		ADDED from AndroidManifest.xml:47:13
+	android:name
+		ADDED from AndroidManifest.xml:45:13
+activity#cn.bmob.zuqiu.ui.RegisterActivity
+ADDED from AndroidManifest.xml:48:9
+	android:screenOrientation
+		ADDED from AndroidManifest.xml:50:13
+	android:theme
+		ADDED from AndroidManifest.xml:51:13
+	android:name
+		ADDED from AndroidManifest.xml:49:13
+activity#cn.bmob.zuqiu.ui.IdentifyingActivity
+ADDED from AndroidManifest.xml:52:9
+	android:screenOrientation
+		ADDED from AndroidManifest.xml:54:13
+	android:theme
+		ADDED from AndroidManifest.xml:55:13
+	android:name
+		ADDED from AndroidManifest.xml:53:13
+activity#cn.bmob.zuqiu.ui.FindPassWordActivity
+ADDED from AndroidManifest.xml:56:9
+	android:screenOrientation
+		ADDED from AndroidManifest.xml:58:13
+	android:theme
+		ADDED from AndroidManifest.xml:59:13
+	android:name
+		ADDED from AndroidManifest.xml:57:13
+activity#cn.bmob.zuqiu.ui.ModifyPassWordActivity
+ADDED from AndroidManifest.xml:60:9
+	android:screenOrientation
+		ADDED from AndroidManifest.xml:62:13
+	android:theme
+		ADDED from AndroidManifest.xml:63:13
+	android:name
+		ADDED from AndroidManifest.xml:61:13
+activity#cn.bmob.zuqiu.ui.MainActivity
+ADDED from AndroidManifest.xml:64:9
+	android:windowSoftInputMode
+		ADDED from AndroidManifest.xml:69:13
+	android:screenOrientation
+		ADDED from AndroidManifest.xml:66:13
+	android:theme
+		ADDED from AndroidManifest.xml:68:13
+	android:name
+		ADDED from AndroidManifest.xml:65:13
+	android:launchMode
+		ADDED from AndroidManifest.xml:67:13
+activity#cn.bmob.zuqiu.ui.ModifyInfomationActivity
+ADDED from AndroidManifest.xml:70:9
+	android:windowSoftInputMode
+		ADDED from AndroidManifest.xml:74:13
+	android:screenOrientation
+		ADDED from AndroidManifest.xml:72:13
+	android:theme
+		ADDED from AndroidManifest.xml:73:13
+	android:name
+		ADDED from AndroidManifest.xml:71:13
+activity#cn.bmob.zuqiu.ui.FriendListActivity
+ADDED from AndroidManifest.xml:75:9
+	android:screenOrientation
+		ADDED from AndroidManifest.xml:77:13
+	android:theme
+		ADDED from AndroidManifest.xml:78:13
+	android:name
+		ADDED from AndroidManifest.xml:76:13
+activity#cn.bmob.zuqiu.ui.AddFriendActivity
+ADDED from AndroidManifest.xml:79:9
+	android:screenOrientation
+		ADDED from AndroidManifest.xml:81:13
+	android:theme
+		ADDED from AndroidManifest.xml:82:13
+	android:name
+		ADDED from AndroidManifest.xml:80:13
+activity#cn.bmob.zuqiu.ui.PersonalInfoActivity
+ADDED from AndroidManifest.xml:83:9
+	android:screenOrientation
+		ADDED from AndroidManifest.xml:85:13
+	android:theme
+		ADDED from AndroidManifest.xml:86:13
+	android:name
+		ADDED from AndroidManifest.xml:84:13
+activity#cn.bmob.zuqiu.ui.PersonalDetailActivity
+ADDED from AndroidManifest.xml:87:9
+	android:screenOrientation
+		ADDED from AndroidManifest.xml:89:13
+	android:theme
+		ADDED from AndroidManifest.xml:90:13
+	android:name
+		ADDED from AndroidManifest.xml:88:13
+activity#cn.bmob.zuqiu.ui.CreateTeamActivity
+ADDED from AndroidManifest.xml:91:9
+	android:screenOrientation
+		ADDED from AndroidManifest.xml:93:13
+	android:theme
+		ADDED from AndroidManifest.xml:94:13
+	android:name
+		ADDED from AndroidManifest.xml:92:13
+activity#cn.bmob.zuqiu.ui.CityChooseActivity
+ADDED from AndroidManifest.xml:95:9
+	android:screenOrientation
+		ADDED from AndroidManifest.xml:97:13
+	android:theme
+		ADDED from AndroidManifest.xml:98:13
+	android:name
+		ADDED from AndroidManifest.xml:96:13
+activity#cn.bmob.zuqiu.ui.CreateLeagueActivity
+ADDED from AndroidManifest.xml:99:9
+	android:screenOrientation
+		ADDED from AndroidManifest.xml:101:13
+	android:theme
+		ADDED from AndroidManifest.xml:102:13
+	android:name
+		ADDED from AndroidManifest.xml:100:13
+activity#cn.bmob.zuqiu.ui.CreateLeagueResultActivity
+ADDED from AndroidManifest.xml:103:9
+	android:screenOrientation
+		ADDED from AndroidManifest.xml:105:13
+	android:theme
+		ADDED from AndroidManifest.xml:106:13
+	android:name
+		ADDED from AndroidManifest.xml:104:13
+activity#cn.bmob.zuqiu.ui.SigleChoiceActivity
+ADDED from AndroidManifest.xml:107:9
+	android:screenOrientation
+		ADDED from AndroidManifest.xml:109:13
+	android:theme
+		ADDED from AndroidManifest.xml:110:13
+	android:name
+		ADDED from AndroidManifest.xml:108:13
+activity#cn.bmob.zuqiu.ui.UserInfoActivity
+ADDED from AndroidManifest.xml:111:9
+	android:screenOrientation
+		ADDED from AndroidManifest.xml:113:13
+	android:theme
+		ADDED from AndroidManifest.xml:114:13
+	android:name
+		ADDED from AndroidManifest.xml:112:13
+activity#cn.bmob.zuqiu.ui.CreateCompetitionActivity
+ADDED from AndroidManifest.xml:115:9
+	android:screenOrientation
+		ADDED from AndroidManifest.xml:117:13
+	android:theme
+		ADDED from AndroidManifest.xml:118:13
+	android:name
+		ADDED from AndroidManifest.xml:116:13
+activity#cn.bmob.zuqiu.ui.ChooseHomeTeamActivity
+ADDED from AndroidManifest.xml:119:9
+	android:screenOrientation
+		ADDED from AndroidManifest.xml:121:13
+	android:theme
+		ADDED from AndroidManifest.xml:122:13
+	android:name
+		ADDED from AndroidManifest.xml:120:13
+activity#cn.bmob.zuqiu.ui.ChooseOpponentTeamActivity
+ADDED from AndroidManifest.xml:123:9
+	android:screenOrientation
+		ADDED from AndroidManifest.xml:125:13
+	android:theme
+		ADDED from AndroidManifest.xml:126:13
+	android:name
+		ADDED from AndroidManifest.xml:124:13
+activity#cn.bmob.zuqiu.ui.CompetitionInfoActivity
+ADDED from AndroidManifest.xml:127:9
+	android:screenOrientation
+		ADDED from AndroidManifest.xml:129:13
+	android:theme
+		ADDED from AndroidManifest.xml:130:13
+	android:name
+		ADDED from AndroidManifest.xml:128:13
+activity#cn.bmob.zuqiu.ui.GradesActivity
+ADDED from AndroidManifest.xml:131:9
+	android:screenOrientation
+		ADDED from AndroidManifest.xml:133:13
+	android:theme
+		ADDED from AndroidManifest.xml:134:13
+	android:name
+		ADDED from AndroidManifest.xml:132:13
+activity#cn.bmob.zuqiu.ui.NearCompetitionsActivity
+ADDED from AndroidManifest.xml:135:9
+	android:screenOrientation
+		ADDED from AndroidManifest.xml:137:13
+	android:theme
+		ADDED from AndroidManifest.xml:138:13
+	android:name
+		ADDED from AndroidManifest.xml:136:13
+activity#cn.bmob.zuqiu.ui.TeamDetailActivity
+ADDED from AndroidManifest.xml:139:9
+	android:screenOrientation
+		ADDED from AndroidManifest.xml:141:13
+	android:theme
+		ADDED from AndroidManifest.xml:142:13
+	android:name
+		ADDED from AndroidManifest.xml:140:13
+activity#cn.bmob.zuqiu.ui.ChangeCaptainActivity
+ADDED from AndroidManifest.xml:143:9
+	android:screenOrientation
+		ADDED from AndroidManifest.xml:145:13
+	android:theme
+		ADDED from AndroidManifest.xml:146:13
+	android:name
+		ADDED from AndroidManifest.xml:144:13
+activity#cn.bmob.zuqiu.ui.TeamMemberActivity
+ADDED from AndroidManifest.xml:147:9
+	android:screenOrientation
+		ADDED from AndroidManifest.xml:149:13
+	android:theme
+		ADDED from AndroidManifest.xml:150:13
+	android:name
+		ADDED from AndroidManifest.xml:148:13
+activity#cn.bmob.zuqiu.ui.AddMemberActivity
+ADDED from AndroidManifest.xml:151:9
+	android:windowSoftInputMode
+		ADDED from AndroidManifest.xml:155:13
+	android:screenOrientation
+		ADDED from AndroidManifest.xml:153:13
+	android:theme
+		ADDED from AndroidManifest.xml:154:13
+	android:name
+		ADDED from AndroidManifest.xml:152:13
+activity#cn.bmob.zuqiu.ui.AddFromFriendActivity
+ADDED from AndroidManifest.xml:156:9
+	android:screenOrientation
+		ADDED from AndroidManifest.xml:158:13
+	android:theme
+		ADDED from AndroidManifest.xml:159:13
+	android:name
+		ADDED from AndroidManifest.xml:157:13
+activity#cn.bmob.zuqiu.ui.CreteOrSearchTeamActivity
+ADDED from AndroidManifest.xml:160:9
+	android:windowSoftInputMode
+		ADDED from AndroidManifest.xml:164:13
+	android:screenOrientation
+		ADDED from AndroidManifest.xml:162:13
+	android:theme
+		ADDED from AndroidManifest.xml:163:13
+	android:name
+		ADDED from AndroidManifest.xml:161:13
+activity#cn.bmob.zuqiu.ui.LineupActivity
+ADDED from AndroidManifest.xml:165:9
+	android:screenOrientation
+		ADDED from AndroidManifest.xml:167:13
+	android:theme
+		ADDED from AndroidManifest.xml:168:13
+	android:name
+		ADDED from AndroidManifest.xml:166:13
+activity#cn.bmob.zuqiu.ui.MyGradesActivity
+ADDED from AndroidManifest.xml:169:9
+	android:screenOrientation
+		ADDED from AndroidManifest.xml:171:13
+	android:theme
+		ADDED from AndroidManifest.xml:172:13
+	android:name
+		ADDED from AndroidManifest.xml:170:13
+activity#cn.bmob.zuqiu.ui.SearchFriendActivity
+ADDED from AndroidManifest.xml:173:9
+	android:screenOrientation
+		ADDED from AndroidManifest.xml:175:13
+	android:theme
+		ADDED from AndroidManifest.xml:176:13
+	android:name
+		ADDED from AndroidManifest.xml:174:13
+activity#cn.bmob.zuqiu.ui.SearchTeamActivity
+ADDED from AndroidManifest.xml:177:9
+	android:screenOrientation
+		ADDED from AndroidManifest.xml:179:13
+	android:theme
+		ADDED from AndroidManifest.xml:180:13
+	android:name
+		ADDED from AndroidManifest.xml:178:13
+activity#cn.bmob.zuqiu.ui.SearchMemberActivity
+ADDED from AndroidManifest.xml:181:9
+	android:screenOrientation
+		ADDED from AndroidManifest.xml:183:13
+	android:theme
+		ADDED from AndroidManifest.xml:184:13
+	android:name
+		ADDED from AndroidManifest.xml:182:13
+activity#cn.bmob.zuqiu.ui.ZhanJiActivity
+ADDED from AndroidManifest.xml:185:9
+	android:screenOrientation
+		ADDED from AndroidManifest.xml:187:13
+	android:theme
+		ADDED from AndroidManifest.xml:188:13
+	android:name
+		ADDED from AndroidManifest.xml:186:13
+activity#cn.bmob.zuqiu.ui.LeagueDetailActivity
+ADDED from AndroidManifest.xml:189:9
+	android:screenOrientation
+		ADDED from AndroidManifest.xml:191:13
+	android:theme
+		ADDED from AndroidManifest.xml:192:13
+	android:name
+		ADDED from AndroidManifest.xml:190:13
+activity#cn.bmob.zuqiu.ui.ModifyItemActivity
+ADDED from AndroidManifest.xml:193:9
+	android:screenOrientation
+		ADDED from AndroidManifest.xml:195:13
+	android:theme
+		ADDED from AndroidManifest.xml:196:13
+	android:name
+		ADDED from AndroidManifest.xml:194:13
+activity#cn.bmob.zuqiu.ui.ModifyPassWordActivity_2
+ADDED from AndroidManifest.xml:197:9
+	android:screenOrientation
+		ADDED from AndroidManifest.xml:199:13
+	android:theme
+		ADDED from AndroidManifest.xml:200:13
+	android:name
+		ADDED from AndroidManifest.xml:198:13
+activity#cn.bmob.zuqiu.ui.InputActivity
+ADDED from AndroidManifest.xml:201:9
+	android:screenOrientation
+		ADDED from AndroidManifest.xml:203:13
+	android:theme
+		ADDED from AndroidManifest.xml:204:13
+	android:name
+		ADDED from AndroidManifest.xml:202:13
+activity#cn.bmob.zuqiu.ui.OtherTeamInfoActivity
+ADDED from AndroidManifest.xml:205:9
+	android:screenOrientation
+		ADDED from AndroidManifest.xml:207:13
+	android:theme
+		ADDED from AndroidManifest.xml:208:13
+	android:name
+		ADDED from AndroidManifest.xml:206:13
+activity#cn.bmob.zuqiu.ui.CompetitionReportActivity
+ADDED from AndroidManifest.xml:209:9
+	android:screenOrientation
+		ADDED from AndroidManifest.xml:211:13
+	android:theme
+		ADDED from AndroidManifest.xml:212:13
+	android:name
+		ADDED from AndroidManifest.xml:210:13
+activity#cn.bmob.zuqiu.ui.ViewGroupExample
+ADDED from AndroidManifest.xml:213:9
+	android:screenOrientation
+		ADDED from AndroidManifest.xml:215:13
+	android:theme
+		ADDED from AndroidManifest.xml:216:13
+	android:name
+		ADDED from AndroidManifest.xml:214:13
+activity#cn.bmob.zuqiu.ui.LeagueRecordActivity
+ADDED from AndroidManifest.xml:217:9
+	android:screenOrientation
+		ADDED from AndroidManifest.xml:219:13
+	android:theme
+		ADDED from AndroidManifest.xml:220:13
+	android:name
+		ADDED from AndroidManifest.xml:218:13
+activity#cn.bmob.zuqiu.ui.AuthFailActivity
+ADDED from AndroidManifest.xml:221:9
+	android:screenOrientation
+		ADDED from AndroidManifest.xml:222:13
+	android:theme
+		ADDED from AndroidManifest.xml:223:13
+	android:name
+		ADDED from AndroidManifest.xml:221:19
+receiver#cn.bmob.zuqiu.receiver.MyPushMessageReceiver
+ADDED from AndroidManifest.xml:227:9
+	android:name
+		ADDED from AndroidManifest.xml:227:19
+intent-filter#com.baidu.android.pushservice.action.MESSAGE+com.baidu.android.pushservice.action.RECEIVE+com.baidu.android.pushservice.action.notification.CLICK
+ADDED from AndroidManifest.xml:228:13
+action#com.baidu.android.pushservice.action.MESSAGE
+ADDED from AndroidManifest.xml:230:17
+	android:name
+		ADDED from AndroidManifest.xml:230:25
+action#com.baidu.android.pushservice.action.RECEIVE
+ADDED from AndroidManifest.xml:232:17
+	android:name
+		ADDED from AndroidManifest.xml:232:25
+action#com.baidu.android.pushservice.action.notification.CLICK
+ADDED from AndroidManifest.xml:233:17
+	android:name
+		ADDED from AndroidManifest.xml:233:25
+receiver#com.baidu.android.pushservice.PushServiceReceiver
+ADDED from AndroidManifest.xml:237:9
+	android:process
+		ADDED from AndroidManifest.xml:238:13
+	android:name
+		ADDED from AndroidManifest.xml:237:19
+intent-filter#android.intent.action.ACTION_POWER_CONNECTED+android.intent.action.ACTION_POWER_DISCONNECTED+android.intent.action.BOOT_COMPLETED+android.intent.action.MEDIA_MOUNTED+android.intent.action.USER_PRESENT+android.net.conn.CONNECTIVITY_CHANGE+com.baidu.android.pushservice.action.media.CLICK+com.baidu.android.pushservice.action.notification.SHOW
+ADDED from AndroidManifest.xml:239:13
+action#android.intent.action.BOOT_COMPLETED
+ADDED from AndroidManifest.xml:240:17
+	android:name
+		ADDED from AndroidManifest.xml:240:25
+action#android.net.conn.CONNECTIVITY_CHANGE
+ADDED from AndroidManifest.xml:241:17
+	android:name
+		ADDED from AndroidManifest.xml:241:25
+action#com.baidu.android.pushservice.action.notification.SHOW
+ADDED from AndroidManifest.xml:242:17
+	android:name
+		ADDED from AndroidManifest.xml:242:25
+action#com.baidu.android.pushservice.action.media.CLICK
+ADDED from AndroidManifest.xml:243:17
+	android:name
+		ADDED from AndroidManifest.xml:243:25
+action#android.intent.action.MEDIA_MOUNTED
+ADDED from AndroidManifest.xml:245:17
+	android:name
+		ADDED from AndroidManifest.xml:245:25
+action#android.intent.action.USER_PRESENT
+ADDED from AndroidManifest.xml:246:17
+	android:name
+		ADDED from AndroidManifest.xml:246:25
+action#android.intent.action.ACTION_POWER_CONNECTED
+ADDED from AndroidManifest.xml:247:17
+	android:name
+		ADDED from AndroidManifest.xml:247:25
+action#android.intent.action.ACTION_POWER_DISCONNECTED
+ADDED from AndroidManifest.xml:248:17
+	android:name
+		ADDED from AndroidManifest.xml:248:25
+receiver#com.baidu.android.pushservice.RegistrationReceiver
+ADDED from AndroidManifest.xml:251:9
+	android:process
+		ADDED from AndroidManifest.xml:252:13
+	android:name
+		ADDED from AndroidManifest.xml:251:19
+intent-filter#com.baidu.android.pushservice.action.BIND_SYNC+com.baidu.android.pushservice.action.METHOD
+ADDED from AndroidManifest.xml:253:13
+action#com.baidu.android.pushservice.action.METHOD
+ADDED from AndroidManifest.xml:254:17
+	android:name
+		ADDED from AndroidManifest.xml:254:25
+action#com.baidu.android.pushservice.action.BIND_SYNC
+ADDED from AndroidManifest.xml:255:17
+	android:name
+		ADDED from AndroidManifest.xml:255:25
+intent-filter#android.intent.action.PACKAGE_REMOVED
+ADDED from AndroidManifest.xml:257:13
+action#android.intent.action.PACKAGE_REMOVED
+ADDED from AndroidManifest.xml:258:17
+	android:name
+		ADDED from AndroidManifest.xml:258:25
+data
+ADDED from AndroidManifest.xml:259:17
+	android:scheme
+		ADDED from AndroidManifest.xml:259:23
+service#com.baidu.android.pushservice.PushService
+ADDED from AndroidManifest.xml:262:9
+	android:process
+		ADDED from AndroidManifest.xml:265:13
+	android:exported
+		ADDED from AndroidManifest.xml:264:13
+	android:name
+		ADDED from AndroidManifest.xml:263:13
+intent-filter#com.baidu.android.pushservice.action.PUSH_SERVICE
+ADDED from AndroidManifest.xml:266:13
+action#com.baidu.android.pushservice.action.PUSH_SERVICE
+ADDED from AndroidManifest.xml:267:17
+	android:name
+		ADDED from AndroidManifest.xml:267:25
+service#com.baidu.android.pushservice.CommandService
+ADDED from AndroidManifest.xml:271:9
+	android:exported
+		ADDED from AndroidManifest.xml:273:13
+	android:name
+		ADDED from AndroidManifest.xml:272:13
+meta-data#api_key
+ADDED from AndroidManifest.xml:277:9
+	android:name
+		ADDED from AndroidManifest.xml:277:20
+	android:value
+		ADDED from AndroidManifest.xml:277:43
+activity#com.tencent.connect.common.AssistActivity
+ADDED from AndroidManifest.xml:281:9
+	android:screenOrientation
+		ADDED from AndroidManifest.xml:284:13
+	android:configChanges
+		ADDED from AndroidManifest.xml:283:13
+	android:theme
+		ADDED from AndroidManifest.xml:285:13
+	android:name
+		ADDED from AndroidManifest.xml:282:13
+activity#com.tencent.tauth.AuthActivity
+ADDED from AndroidManifest.xml:288:9
+	android:noHistory
+		ADDED from AndroidManifest.xml:291:13
+	android:name
+		ADDED from AndroidManifest.xml:289:13
+	android:launchMode
+		ADDED from AndroidManifest.xml:290:13
+intent-filter#android.intent.action.VIEW+android.intent.category.BROWSABLE+android.intent.category.DEFAULT
+ADDED from AndroidManifest.xml:292:13
+action#android.intent.action.VIEW
+ADDED from AndroidManifest.xml:293:17
+	android:name
+		ADDED from AndroidManifest.xml:293:25
+category#android.intent.category.DEFAULT
+ADDED from AndroidManifest.xml:295:17
+	android:name
+		ADDED from AndroidManifest.xml:295:27
+category#android.intent.category.BROWSABLE
+ADDED from AndroidManifest.xml:296:17
+	android:name
+		ADDED from AndroidManifest.xml:296:27
+activity#cn.bmob.zuqiu.wxapi.WXEntryActivity
+ADDED from AndroidManifest.xml:303:9
+	android:configChanges
+		ADDED from AndroidManifest.xml:305:13
+	android:theme
+		ADDED from AndroidManifest.xml:307:13
+	android:exported
+		ADDED from AndroidManifest.xml:306:13
+	android:name
+		ADDED from AndroidManifest.xml:304:13
+activity#cn.sharesdk.framework.ShareSDKUIShell
+ADDED from AndroidManifest.xml:309:9
+	android:windowSoftInputMode
+		ADDED from AndroidManifest.xml:314:13
+	android:screenOrientation
+		ADDED from AndroidManifest.xml:312:13
+	android:configChanges
+		ADDED from AndroidManifest.xml:311:13
+	android:theme
+		ADDED from AndroidManifest.xml:313:13
+	android:name
+		ADDED from AndroidManifest.xml:310:13
+activity#cn.bmob.social.share.core.activity.ShareActivity
+ADDED from AndroidManifest.xml:326:9
+	android:theme
+		ADDED from AndroidManifest.xml:330:13
+	android:exported
+		ADDED from AndroidManifest.xml:328:13
+	android:name
+		ADDED from AndroidManifest.xml:327:13
+	android:launchMode
+		ADDED from AndroidManifest.xml:329:13
+intent-filter#android.intent.category.DEFAULT+com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY
+ADDED from AndroidManifest.xml:333:13
+action#com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY
+ADDED from AndroidManifest.xml:334:17
+	android:name
+		ADDED from AndroidManifest.xml:334:25
+activity#cn.bmob.social.share.core.login.AuthActivity
+ADDED from AndroidManifest.xml:339:9
+	android:configChanges
+		ADDED from AndroidManifest.xml:341:13
+	android:theme
+		ADDED from AndroidManifest.xml:342:13
+	android:name
+		ADDED from AndroidManifest.xml:340:13
+activity#cn.bmob.v3.update.UpdateDialogActivity
+ADDED from AndroidManifest.xml:344:9
+	android:theme
+		ADDED from AndroidManifest.xml:346:13
+	android:name
+		ADDED from AndroidManifest.xml:345:13
+meta-data#UMENG_APPKEY
+ADDED from AndroidManifest.xml:350:9
+	android:name
+		ADDED from AndroidManifest.xml:350:61
+	android:value
+		ADDED from AndroidManifest.xml:350:20
+meta-data#UMENG_CHANNEL
+ADDED from AndroidManifest.xml:351:9
+	android:name
+		ADDED from AndroidManifest.xml:351:47
+	android:value
+		ADDED from AndroidManifest.xml:351:20

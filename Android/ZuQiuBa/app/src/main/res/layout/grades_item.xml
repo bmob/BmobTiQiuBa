@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal" 
+    android:padding="16dp"
+    android:background="#FFFFFF"
+    >
+    <LinearLayout 
+        android:id="@+id/rl_grades"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        android:background="@drawable/bg_gredes_content"
+        >
+        <TextView 
+            android:id="@+id/grades_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/text_36_272f38"
+            android:text="李天一"
+            />
+        <TextView 
+            android:id="@+id/grades_points"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            style="@style/text_60_272f38"
+            android:text="8"
+            android:textStyle="bold"
+            />
+        
+        
+    </LinearLayout>
+	<TextView 
+            android:id="@+id/grades_comment_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_grades_com"
+            android:layout_marginLeft="8dp"
+            style="@style/text_36_272f38"
+            android:text="浪费机会"
+            android:padding="12dp"
+            />
+</LinearLayout>

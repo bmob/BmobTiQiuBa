@@ -1,0 +1,123 @@
+<resources>
+
+    <!-- Example Theme -->
+    <style name="AiThemeSample">
+        <item name="numberPickerUpButtonStyle">@style/AiWidget.ImageButton.NumberPickerUpButton</item>
+        <item name="numberPickerDownButtonStyle">@style/AiWidget.ImageButton.NumberPickerDownButton</item>
+        <item name="numberPickerInputTextStyle">@style/AiWidget.EditText.NumberPickerInputText</item>
+        <item name="numberPickerStyle">@style/AiWidget.NumberPicker</item>
+    </style>
+
+    <style name="AiThemeSample.Light">
+        <item name="numberPickerUpButtonStyle">@style/AiWidget.ImageButton.NumberPickerUpButton.Light</item>
+        <item name="numberPickerDownButtonStyle">@style/AiWidget.ImageButton.NumberPickerDownButton.Light</item>
+        <item name="numberPickerInputTextStyle">@style/AiWidget.EditText.NumberPickerInputText.Light</item>
+        <item name="numberPickerStyle">@style/AiWidget.NumberPicker</item>
+    </style>
+
+    <!-- Don't touch this -->
+    <attr name="numberPickerStyle" format="reference" />
+    <attr name="numberPickerUpButtonStyle" format="reference" />
+    <attr name="numberPickerDownButtonStyle" format="reference" />
+    <attr name="numberPickerInputTextStyle" format="reference" />
+
+    <declare-styleable name="NumberPicker">
+
+        <!-- @hide Color for the solid color background if such for optimized rendering. -->
+        <attr name="solidColor" format="color|reference" />
+        <!-- @hide Whether the number picker supports fligning. -->
+        <attr name="flingable" format="boolean" />
+        <!-- @hide The divider for making the selection area. -->
+        <attr name="selectionDivider" format="reference" />
+        <!-- @hide The height of the selection divider. -->
+        <attr name="selectionDividerHeight" format="dimension" />
+        <!-- @hide The distance of the selection divider -->
+        <attr name="selectionDividersDistance" format="dimension" />
+        <!-- @hide The min height of the NumberPicker. -->
+        <attr name="android:minHeight" />
+        <!-- @hide The max height of the NumberPicker. -->
+        <attr name="android:maxHeight" />
+        <!-- @hide The min width of the NumberPicker. -->
+        <attr name="android:minWidth" />
+        <!-- @hide The max width of the NumberPicker. -->
+        <attr name="android:maxWidth" />
+
+        <!-- We need some extra attributes -->
+        <attr name="android:orientation" />
+        <attr name="android:fadingEdgeLength" />
+    </declare-styleable>
+
+    <style name="AiWidget">
+        <item name="android:textAppearance">?android:attr/textAppearance</item>
+    </style>
+
+    <style name="AiWidget.NumberPicker">
+        <item name="android:orientation">vertical</item>
+        <item name="android:fadingEdge">vertical</item>
+        <item name="android:fadingEdgeLength">50dip</item>
+        <item name="solidColor">@android:color/transparent</item>
+        <item name="flingable">true</item>
+        <item name="selectionDivider">@drawable/dialog_set_time_divider</item>
+        <item name="selectionDividerHeight">2dip</item>
+        <item name="android:minWidth">48dip</item>
+        <item name="android:maxHeight">200dip</item>
+    </style>
+
+    
+
+    <style name="AiWidget.Light.NumberPicker" parent="AiWidget.NumberPicker"></style>
+
+    <style name="AiWidget.EditText.NumberPickerInputText.Light" parent="AiWidget.EditText.NumberPickerInputText"></style>
+
+    <style name="AiWidget.ImageButton.NumberPickerUpButton.Light" parent="AiWidget.ImageButton.NumberPickerUpButton">
+        <item name="android:src">@drawable/np_numberpicker_up_btn_holo_light</item>
+    </style>
+
+    <style name="AiWidget.ImageButton.NumberPickerDownButton.Light" parent="AiWidget.ImageButton.NumberPickerDownButton">
+        <item name="android:src">@drawable/np_numberpicker_down_btn_holo_light</item>
+    </style>
+
+    <style name="AiWidget.EditText.NumberPickerInputText">
+        <item name="android:paddingTop">13sp</item>
+        <item name="android:paddingBottom">13sp</item>
+        <item name="android:paddingLeft">2sp</item>
+        <item name="android:paddingRight">2sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:background">@null</item>
+    </style>
+
+    <!--<style name="AiWidget.EditText" parent="AiWidget.EditText"></style>-->
+
+    <style name="AiWidget.EditText">
+        <item name="android:focusable">true</item>
+        <item name="android:focusableInTouchMode">true</item>
+        <item name="android:clickable">true</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceMediumInverse</item>
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <style name="AiWidget.ImageButton.NumberPickerUpButton">
+        <item name="android:background">@null</item>
+        <item name="android:src">@drawable/np_numberpicker_up_btn_holo_dark</item>
+        <item name="android:paddingTop">16dip</item>
+        <item name="android:paddingBottom">22dip</item>
+    </style>
+
+    <style name="AiWidget.ImageButton.NumberPickerDownButton">
+        <item name="android:background">@null</item>
+        <item name="android:src">@drawable/np_numberpicker_down_btn_holo_dark</item>
+        <item name="android:paddingTop">22dip</item>
+        <item name="android:paddingBottom">16dip</item>
+    </style>
+
+    <style name="AiWidget.ImageButton">
+        <item name="android:focusable">true</item>
+        <item name="android:clickable">true</item>
+        <item name="android:scaleType">center</item>
+        <item name="android:background">@android:drawable/btn_default</item>
+    </style>
+
+</resources>

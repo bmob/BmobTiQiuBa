@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@drawable/bg_login"
+     >
+    <RelativeLayout 
+        android:id="@+id/identify_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/bg_input"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        >
+        <TextView 
+            android:id="@+id/identify_input_tips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/identify_code_tips"
+            android:textColor="@color/login_tips"
+            android:textSize="16sp"
+            />
+        <EditText 
+            android:id="@+id/identify_input_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/identify_input_tips"
+            android:layout_marginLeft="16dp"
+            android:textSize="16sp"
+            android:inputType="number"
+            android:hint="@string/identify_input_hint"
+            android:textColorHint="@color/login_lint"
+            android:background="@null"
+            />
+        
+        
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/identify_input"
+        android:layout_marginTop="10dp"
+        android:text="若未收到验证码，请返回注册页面重新提交"/>
+	<Button
+	    android:id="@+id/identify_commit"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_marginTop="24dp"
+		android:paddingTop="8dp"
+		android:paddingBottom="8dp"
+	    android:text="@string/register_commit"
+	    android:textColor="@android:color/white"
+	    android:textSize="18sp"
+	    android:gravity="center"
+	    android:background="@drawable/btn_yellow"
+	    />
+</LinearLayout>

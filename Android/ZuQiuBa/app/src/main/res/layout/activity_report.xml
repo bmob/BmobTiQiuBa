@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fcf="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+     >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#2F4F4F"
+        >
+
+        <RelativeLayout
+            android:id="@+id/point_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp" >
+
+            <TextView
+                android:id="@+id/vs_line"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="4dp"
+                android:gravity="center"
+                android:text="-"
+                android:textColor="@color/forget_pwd_tips"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/report_home_point"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/vs_line"
+                android:gravity="center"
+                android:padding="0dp"
+                android:textColor="@color/forget_pwd_tips"
+                android:textSize="44sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/report_oppo_point"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/vs_line"
+                android:gravity="center"
+                android:textColor="@color/forget_pwd_tips"
+                android:textSize="44sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/report_home_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/report_home_point"
+                android:layout_marginBottom="12dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="8dp"
+                android:layout_toLeftOf="@id/report_home_point"
+                android:gravity="center"
+                android:textColor="@android:color/white"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/report_oppo_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/report_oppo_point"
+                android:layout_marginBottom="12dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="8dp"
+                android:layout_toRightOf="@id/report_oppo_point"
+                android:gravity="center"
+                android:textColor="@android:color/white"
+                android:textSize="18sp" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/time_and_site"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal" 
+            android:layout_below="@id/point_content"
+            >
+
+            <TextView
+                android:id="@+id/report_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="16dp"
+                android:gravity="center"
+                android:textColor="@android:color/white"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/report_site"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="4dp"
+                android:gravity="center"
+                android:textColor="@android:color/white"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/report_nature"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/time_and_site"
+            android:layout_marginRight="4dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+
+        <at.technikum.mti.fancycoverflow.FancyCoverFlow
+            android:id="@+id/fancyCoverFlow"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/report_nature"
+            fcf:maxRotation="45"
+            fcf:scaleDownGravity="0.5"
+            fcf:unselectedAlpha="0.3"
+            fcf:unselectedSaturation="0.0"
+            fcf:unselectedScale="0.4" />
+
+        <ImageView
+            android:id="@+id/report_share"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:src="@drawable/share" 
+            android:layout_margin="16dp"
+            />
+    </RelativeLayout>
+
+</ScrollView>

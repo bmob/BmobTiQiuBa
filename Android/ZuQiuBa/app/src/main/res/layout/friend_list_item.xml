@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:padding="16dp"
+    >
+    <cn.bmob.zuqiu.view.views.CircleImageView
+        android:id="@+id/friend_logo"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@drawable/detail_user_logo_default" />
+	<TextView 
+	    android:id="@+id/friend_name"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    style="@style/text_36_272f38"
+	    android:layout_marginLeft="16dp"
+	    android:layout_toRightOf="@id/friend_logo"
+        android:contentDescription="Name"
+	    />
+	<TextView 
+	    android:id="@+id/friend_relation"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    style="@style/text_28_989b9f"
+	    android:layout_marginLeft="16dp"
+	    android:layout_below="@id/friend_name"
+	    android:layout_toRightOf="@id/friend_logo"
+	    android:layout_marginTop="4dp"
+        android:contentDescription="好友"
+	    />
+</RelativeLayout>

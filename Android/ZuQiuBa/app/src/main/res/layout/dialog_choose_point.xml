@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="#FFFFFF"
+    >
+    <TextView
+        android:id="@+id/choose_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textColor="#000000"
+        android:text="选择分数"
+        android:padding="8dp"
+        />
+    <View
+        android:id="@+id/diviver"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/forget_pwd_tips"
+        />
+	<ListView 
+	    android:id="@+id/point_list"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:cacheColorHint="#00000000"
+	    android:dividerHeight="1px"
+	    android:divider="@color/bg_dan_hui"
+	    ></ListView>
+</LinearLayout>

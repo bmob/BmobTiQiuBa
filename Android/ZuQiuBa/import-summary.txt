@@ -1,0 +1,272 @@
+ECLIPSE ANDROID PROJECT IMPORT SUMMARY
+======================================
+
+Ignored Files:
+--------------
+The following files were *not* copied into the new Gradle project; you
+should evaluate whether these are still needed in your project and if
+so manually move them:
+
+* doc\
+* doc\allclasses-frame.html.svntmp
+* doc\allclasses-noframe.html
+* doc\cn\
+* doc\cn\bmob\
+* doc\cn\bmob\v3\
+* doc\cn\bmob\v3\AsyncCustomEndpoints.html
+* doc\cn\bmob\v3\Bmob.html
+* doc\cn\bmob\v3\BmobACL.html
+* doc\cn\bmob\v3\BmobInstallation.html
+* doc\cn\bmob\v3\BmobObject.html
+* doc\cn\bmob\v3\BmobPushManager.html
+* doc\cn\bmob\v3\BmobQuery.CachePolicy.html
+* doc\cn\bmob\v3\BmobQuery.html
+* doc\cn\bmob\v3\BmobRealTimeData.html
+* doc\cn\bmob\v3\BmobRole.html
+* doc\cn\bmob\v3\BmobUser.html
+* doc\cn\bmob\v3\class-use\
+* doc\cn\bmob\v3\class-use\AsyncCustomEndpoints.html
+* doc\cn\bmob\v3\class-use\Bmob.html
+* doc\cn\bmob\v3\class-use\BmobACL.html
+* doc\cn\bmob\v3\class-use\BmobInstallation.html
+* doc\cn\bmob\v3\class-use\BmobObject.html
+* doc\cn\bmob\v3\class-use\BmobPushManager.html
+* doc\cn\bmob\v3\class-use\BmobQuery.CachePolicy.html
+* doc\cn\bmob\v3\class-use\BmobQuery.html
+* doc\cn\bmob\v3\class-use\BmobRealTimeData.html
+* doc\cn\bmob\v3\class-use\BmobRole.html
+* doc\cn\bmob\v3\class-use\BmobUser.html
+* doc\cn\bmob\v3\datatype\
+* doc\cn\bmob\v3\datatype\BmobDate.html
+* doc\cn\bmob\v3\datatype\BmobFile.html
+* doc\cn\bmob\v3\datatype\BmobGeoPoint.html
+* doc\cn\bmob\v3\datatype\BmobPointer.html
+* doc\cn\bmob\v3\datatype\BmobRelation.html
+* doc\cn\bmob\v3\datatype\class-use\
+* doc\cn\bmob\v3\datatype\class-use\BmobDate.html
+* doc\cn\bmob\v3\datatype\class-use\BmobFile.html
+* doc\cn\bmob\v3\datatype\class-use\BmobGeoPoint.html
+* doc\cn\bmob\v3\datatype\class-use\BmobPointer.html
+* doc\cn\bmob\v3\datatype\class-use\BmobRelation.html
+* doc\cn\bmob\v3\datatype\package-frame.html
+* doc\cn\bmob\v3\datatype\package-summary.html
+* doc\cn\bmob\v3\datatype\package-tree.html
+* doc\cn\bmob\v3\datatype\package-use.html
+* doc\cn\bmob\v3\listener\
+* doc\cn\bmob\v3\listener\BmobUpdateListener.html
+* doc\cn\bmob\v3\listener\CloudCodeListener.html
+* doc\cn\bmob\v3\listener\CountListener.html
+* doc\cn\bmob\v3\listener\DeleteListener.html
+* doc\cn\bmob\v3\listener\EmailVerifyListener.html
+* doc\cn\bmob\v3\listener\FindCallback.html
+* doc\cn\bmob\v3\listener\FindListener.html
+* doc\cn\bmob\v3\listener\GetCallback.html
+* doc\cn\bmob\v3\listener\GetListener.html
+* doc\cn\bmob\v3\listener\GetServerTimeListener.html
+* doc\cn\bmob\v3\listener\InitListener.html
+* doc\cn\bmob\v3\listener\OtherLoginListener.html
+* doc\cn\bmob\v3\listener\PushListener.html
+* doc\cn\bmob\v3\listener\ResetPasswordListener.html
+* doc\cn\bmob\v3\listener\SaveListener.html
+* doc\cn\bmob\v3\listener\ThumbnailUrlListener.html
+* doc\cn\bmob\v3\listener\UpdateListener.html
+* doc\cn\bmob\v3\listener\UploadBatchListener.html
+* doc\cn\bmob\v3\listener\UploadFileListener.html
+* doc\cn\bmob\v3\listener\ValueEventListener.html
+* doc\cn\bmob\v3\listener\XListener.html
+* doc\cn\bmob\v3\listener\XUploadListener.html
+* doc\cn\bmob\v3\listener\class-use\
+* doc\cn\bmob\v3\listener\class-use\BmobUpdateListener.html
+* doc\cn\bmob\v3\listener\class-use\CloudCodeListener.html
+* doc\cn\bmob\v3\listener\class-use\CountListener.html
+* doc\cn\bmob\v3\listener\class-use\DeleteListener.html
+* doc\cn\bmob\v3\listener\class-use\EmailVerifyListener.html
+* doc\cn\bmob\v3\listener\class-use\FindCallback.html
+* doc\cn\bmob\v3\listener\class-use\FindListener.html
+* doc\cn\bmob\v3\listener\class-use\GetCallback.html
+* doc\cn\bmob\v3\listener\class-use\GetListener.html
+* doc\cn\bmob\v3\listener\class-use\GetServerTimeListener.html
+* doc\cn\bmob\v3\listener\class-use\InitListener.html
+* doc\cn\bmob\v3\listener\class-use\OtherLoginListener.html
+* doc\cn\bmob\v3\listener\class-use\PushListener.html
+* doc\cn\bmob\v3\listener\class-use\ResetPasswordListener.html
+* doc\cn\bmob\v3\listener\class-use\SaveListener.html
+* doc\cn\bmob\v3\listener\class-use\ThumbnailUrlListener.html
+* doc\cn\bmob\v3\listener\class-use\UpdateListener.html
+* doc\cn\bmob\v3\listener\class-use\UploadBatchListener.html
+* doc\cn\bmob\v3\listener\class-use\UploadFileListener.html
+* doc\cn\bmob\v3\listener\class-use\ValueEventListener.html
+* doc\cn\bmob\v3\listener\class-use\XListener.html
+* doc\cn\bmob\v3\listener\class-use\XUploadListener.html
+* doc\cn\bmob\v3\listener\package-frame.html
+* doc\cn\bmob\v3\listener\package-summary.html
+* doc\cn\bmob\v3\listener\package-tree.html
+* doc\cn\bmob\v3\listener\package-use.html
+* doc\cn\bmob\v3\package-frame.html
+* doc\cn\bmob\v3\package-summary.html
+* doc\cn\bmob\v3\package-tree.html
+* doc\cn\bmob\v3\package-use.html
+* doc\cn\bmob\v3\update\
+* doc\cn\bmob\v3\update\AppVersion.html
+* doc\cn\bmob\v3\update\BmobUpdateAgent.html
+* doc\cn\bmob\v3\update\UpdateDialogActivity.html
+* doc\cn\bmob\v3\update\UpdateResponse.html
+* doc\cn\bmob\v3\update\UpdateStatus.html
+* doc\cn\bmob\v3\update\class-use\
+* doc\cn\bmob\v3\update\class-use\AppVersion.html
+* doc\cn\bmob\v3\update\class-use\BmobUpdateAgent.html
+* doc\cn\bmob\v3\update\class-use\UpdateDialogActivity.html
+* doc\cn\bmob\v3\update\class-use\UpdateResponse.html
+* doc\cn\bmob\v3\update\class-use\UpdateStatus.html
+* doc\cn\bmob\v3\update\package-frame.html
+* doc\cn\bmob\v3\update\package-summary.html
+* doc\cn\bmob\v3\update\package-tree.html
+* doc\cn\bmob\v3\update\package-use.html
+* doc\cn\bmob\v3\update\res\
+* doc\cn\bmob\v3\update\res\BmobResource.html
+* doc\cn\bmob\v3\update\res\UpdateConfig.html
+* doc\cn\bmob\v3\update\res\class-use\
+* doc\cn\bmob\v3\update\res\class-use\BmobResource.html
+* doc\cn\bmob\v3\update\res\class-use\UpdateConfig.html
+* doc\cn\bmob\v3\update\res\package-frame.html
+* doc\cn\bmob\v3\update\res\package-summary.html
+* doc\cn\bmob\v3\update\res\package-tree.html
+* doc\cn\bmob\v3\update\res\package-use.html
+* doc\com\
+* doc\com\bmob\
+* doc\com\bmob\BTPFileResponse.html
+* doc\com\bmob\BmobConfiguration.Builder.html
+* doc\com\bmob\BmobConfiguration.html
+* doc\com\bmob\BmobPro.html
+* doc\com\bmob\BmobProFile.html
+* doc\com\bmob\btp\
+* doc\com\bmob\btp\callback\
+* doc\com\bmob\btp\callback\BaseListener.html
+* doc\com\bmob\btp\callback\CommandListener.html
+* doc\com\bmob\btp\callback\CommonListener.html
+* doc\com\bmob\btp\callback\DownloadListener.html
+* doc\com\bmob\btp\callback\IListener.html
+* doc\com\bmob\btp\callback\LocalThumbnailListener.html
+* doc\com\bmob\btp\callback\ShakeHandListener.html
+* doc\com\bmob\btp\callback\SubmitListener.html
+* doc\com\bmob\btp\callback\ThumbnailListener.html
+* doc\com\bmob\btp\callback\UploadBatchListener.html
+* doc\com\bmob\btp\callback\UploadListener.html
+* doc\com\bmob\btp\callback\class-use\
+* doc\com\bmob\btp\callback\class-use\BaseListener.html
+* doc\com\bmob\btp\callback\class-use\CommandListener.html
+* doc\com\bmob\btp\callback\class-use\CommonListener.html
+* doc\com\bmob\btp\callback\class-use\DownloadListener.html
+* doc\com\bmob\btp\callback\class-use\IListener.html
+* doc\com\bmob\btp\callback\class-use\LocalThumbnailListener.html
+* doc\com\bmob\btp\callback\class-use\ShakeHandListener.html
+* doc\com\bmob\btp\callback\class-use\SubmitListener.html
+* doc\com\bmob\btp\callback\class-use\ThumbnailListener.html
+* doc\com\bmob\btp\callback\class-use\UploadBatchListener.html
+* doc\com\bmob\btp\callback\class-use\UploadListener.html
+* doc\com\bmob\btp\callback\package-frame.html
+* doc\com\bmob\btp\callback\package-summary.html
+* doc\com\bmob\btp\callback\package-tree.html
+* doc\com\bmob\btp\callback\package-use.html
+* doc\com\bmob\class-use\
+* doc\com\bmob\class-use\BTPFileResponse.html
+* doc\com\bmob\class-use\BmobConfiguration.Builder.html
+* doc\com\bmob\class-use\BmobConfiguration.html
+* doc\com\bmob\class-use\BmobPro.html
+* doc\com\bmob\class-use\BmobProFile.html
+* doc\com\bmob\package-frame.html
+* doc\com\bmob\package-summary.html
+* doc\com\bmob\package-tree.html
+* doc\com\bmob\package-use.html
+* doc\constant-values.html
+* doc\deprecated-list.html
+* doc\help-doc.html
+* doc\index-files\
+* doc\index-files\index-1.html
+* doc\index-files\index-10.html
+* doc\index-files\index-11.html
+* doc\index-files\index-12.html
+* doc\index-files\index-13.html
+* doc\index-files\index-14.html
+* doc\index-files\index-15.html
+* doc\index-files\index-16.html
+* doc\index-files\index-17.html
+* doc\index-files\index-18.html
+* doc\index-files\index-19.html
+* doc\index-files\index-2.html
+* doc\index-files\index-20.html
+* doc\index-files\index-21.html
+* doc\index-files\index-22.html
+* doc\index-files\index-3.html
+* doc\index-files\index-4.html
+* doc\index-files\index-5.html
+* doc\index-files\index-6.html
+* doc\index-files\index-7.html
+* doc\index-files\index-8.html
+* doc\index-files\index-9.html
+* doc\index.html
+* doc\overview-frame.html
+* doc\overview-summary.html
+* doc\overview-tree.html
+* doc\package-list
+* doc\resources\
+* doc\resources\inherit.gif
+* doc\serialized-form.html
+* doc\stylesheet.css
+* ic_launcher-web.png
+* javadoc.xml
+* proguard-project.txt
+
+Replaced Jars with Dependencies:
+--------------------------------
+The importer recognized the following .jar files as third party
+libraries and replaced them with Gradle dependencies instead. This has
+the advantage that more explicit version information is known, and the
+libraries can be updated automatically. However, it is possible that
+the .jar file in your project was of an older version than the
+dependency we picked, which could render the project not compileable.
+You can disable the jar replacement in the import wizard and try again:
+
+android-support-v4.jar => com.android.support:support-v4:19.+
+
+Moved Files:
+------------
+Android Gradle projects use a different directory structure than ADT
+Eclipse projects. Here's how the projects were restructured:
+
+* AndroidManifest.xml => bmobSDK_V333\src\main\AndroidManifest.xml
+* libs\mta-sdk-1.0.0.jar => bmobSDK_V333\libs\mta-sdk-1.0.0.jar
+* libs\open_sdk.jar => bmobSDK_V333\libs\open_sdk.jar
+* libs\weibosdkcore.jar => bmobSDK_V333\libs\weibosdkcore.jar
+* lint.xml => bmobSDK_V333\lint.xml
+* res\ => bmobSDK_V333\src\main\res\
+* src\ => bmobSDK_V333\src\main\java\
+
+Missing Android Support Repository:
+-----------------------------------
+Some useful libraries, such as the Android Support Library, are
+installed from a special Maven repository, which should be installed
+via the SDK manager.
+
+It looks like this library is missing from your SDK installation at:
+D:\android\adt-bundle-windows-x86_64-20140702\sdk
+
+To install it, open the SDK manager, and in the Extras category,
+select "Android Support Repository". You may also want to install the
+"Google Repository" if you want to use libraries like Google Play
+Services.
+
+Next Steps:
+-----------
+You can now build the project. The Gradle project needs network
+connectivity to download dependencies.
+
+Bugs:
+-----
+If for some reason your project does not build, and you determine that
+it is due to a bug or limitation of the Eclipse to Gradle importer,
+please file a bug at http://b.android.com with category
+Component-Tools.
+
+(This import summary is for your information only, and can be deleted
+after import once you are satisfied with the results.)

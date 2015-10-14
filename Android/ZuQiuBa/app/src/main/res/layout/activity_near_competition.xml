@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="#FFFFFF"
+    >
+    <TextView
+        android:id="@+id/time_year"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textColor="#000000"
+        android:padding="8dp"
+        android:text="2014年"
+        android:background="@color/bg_dan_hui"
+        android:visibility="gone"
+        />
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+ 	<ListView 
+        android:id="@+id/competition_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:cacheColorHint="#00000000"
+        android:scrollbars="none"
+        android:dividerHeight="1px"
+        android:divider="@color/bg_dan_hui"
+        ></ListView>
+ 	</android.support.v4.widget.SwipeRefreshLayout>
+ 	<TextView 
+ 	    android:id="@+id/empty_competiton"
+ 	    android:layout_width="match_parent"
+ 	    android:layout_height="match_parent"
+ 	    android:text="暂无数据"
+ 	    android:gravity="center"
+        android:visibility="gone"
+ 	    android:layout_gravity="center"
+ 	    />
+</RelativeLayout>

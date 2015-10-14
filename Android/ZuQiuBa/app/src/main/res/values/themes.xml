@@ -1,0 +1,17 @@
+<resources>
+
+    <style name="AiTheme" parent="android:Theme.NoTitleBar">
+        <item name="numberPickerUpButtonStyle">@style/AiWidget.ImageButton.NumberPickerUpButton</item>
+        <item name="numberPickerDownButtonStyle">@style/AiWidget.ImageButton.NumberPickerDownButton</item>
+        <item name="numberPickerInputTextStyle">@style/AiWidget.EditText.NumberPickerInputText</item>
+        <item name="numberPickerStyle">@style/AiWidget.NumberPicker</item>
+    </style>
+
+    <style name="AiTheme.Light" parent="android:Theme.Light.NoTitleBar">
+        <item name="numberPickerUpButtonStyle">@style/AiWidget.ImageButton.NumberPickerUpButton.Light</item>
+        <item name="numberPickerDownButtonStyle">@style/AiWidget.ImageButton.NumberPickerDownButton.Light</item>
+        <item name="numberPickerInputTextStyle">@style/AiWidget.EditText.NumberPickerInputText.Light</item>
+        <item name="numberPickerStyle">@style/AiWidget.NumberPicker</item>
+    </style>
+
+</resources>

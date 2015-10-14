@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:clickable="false"
+    android:focusable="false"
+    android:gravity="center_vertical"
+    android:orientation="horizontal" >
+
+    <cn.bmob.zuqiu.view.views.NumberPicker
+        android:id="@+id/time_hours" 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=":" android:layout_margin="8dp"
+        android:textSize="20.0sp" />
+
+    <cn.bmob.zuqiu.view.views.NumberPicker
+        android:id="@+id/time_minutes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="15dp" />
+
+    <TextSwitcher
+        android:id="@+id/time_switcher"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inAnimation="@anim/slide_from_right_slow"
+        android:outAnimation="@anim/slide_to_left_slow" >
+
+        <TextView
+            android:id="@+id/time_am"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|center"
+            android:text="AM"
+            android:textColor="#32979a"
+            android:textSize="20.0sp" />
+
+        <TextView
+            android:id="@+id/time_pm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|center"
+            android:text="PM"
+            android:textColor="#32979a"
+            android:textSize="20.0sp" />
+    </TextSwitcher>
+
+</LinearLayout>

@@ -1,0 +1,624 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="48dp"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+    <include
+        android:id="@+id/fragment_actionbar"
+        layout="@layout/actionbar" />
+
+    <FrameLayout
+        android:id="@+id/content"
+        android:layout_below="@+id/fragment_actionbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/swipe_refresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true"
+                android:scrollbars="none">
+
+                <RelativeLayout
+                    android:id="@+id/fragment_personal_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <cn.bmob.zuqiu.view.views.CircleImageView
+                        android:id="@+id/user_avator"
+                        android:layout_width="65dp"
+                        android:layout_height="65dp"
+                        android:layout_margin="16dp"
+                        android:src="@drawable/detail_user_logo_default" />
+
+                    <TextView
+                        android:id="@+id/user_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/user_avator"
+                        android:layout_toRightOf="@+id/user_avator"
+                        android:text="名字"
+                        android:textColor="#272f38"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/team_and_city"
+                        android:layout_alignLeft="@id/user_name"
+                        android:layout_below="@id/user_name"
+                        android:orientation="horizontal">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_weight="1">
+                            <TextView
+                                android:id="@+id/user_age"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginBottom="5dp"
+                                android:text="年龄"
+                                android:textColor="#989b9f"
+                                android:textSize="14sp" />
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+                                <TextView
+                                    android:id="@+id/user_team_tips"
+                                    style="@style/text_28_989b9f"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="球队:" />
+                                <TextSwitcher
+                                    android:id="@+id/user_team"
+                                    style="@style/text_28_989b9f"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="暂无" />
+                                </LinearLayout>
+
+                            </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_weight="1">
+                            <TextView
+                                android:id="@+id/user_location"
+                                style="@style/text_28_989b9f"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginBottom="5dp"
+                                android:singleLine="true"
+                                android:text="位置" />
+                            <TextView
+                                android:id="@+id/user_city"
+                                style="@style/text_28_989b9f"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:maxWidth="100dp"
+                                android:text="城市"
+                                android:singleLine="true"
+                                android:visibility="visible" />
+                            </LinearLayout>
+
+                    </LinearLayout>
+
+
+
+
+                    <!--<RelativeLayout-->
+                        <!--android:id="@+id/team_and_city"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_alignLeft="@id/user_age"-->
+                        <!--android:layout_below="@id/user_age"-->
+                        <!--android:layout_marginTop="4dp">-->
+
+
+
+
+
+                        <!---->
+
+                    <!--</RelativeLayout>-->
+
+                    <View
+                        android:id="@+id/diviver_one"
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_below="@id/team_and_city"
+                        android:layout_marginTop="16dp"
+                        android:background="@drawable/bg_diviver" />
+
+                    <LinearLayout
+                        android:id="@+id/tech_argure"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/diviver_one"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:id="@+id/left_argure"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <RelativeLayout
+                                android:id="@+id/argure_content"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="16dp">
+
+                                <TextView
+                                    android:id="@+id/valid_competiton"
+                                    style="@style/text_75_f17600"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:gravity="bottom"
+                                    android:text="0"
+
+                                    />
+
+                                <TextView
+                                    android:id="@+id/tips_competiton"
+                                    style="@style/text_30_848587"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignBottom="@id/valid_competiton"
+                                    android:layout_margin="4dp"
+                                    android:layout_toLeftOf="@id/valid_competiton"
+                                    android:text="@string/tips_compe" />
+
+                                <TextView
+                                    android:id="@+id/total_competiton"
+                                    style="@style/text_30_num"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignBottom="@id/valid_competiton"
+                                    android:layout_margin="4dp"
+                                    android:layout_toRightOf="@id/valid_competiton"
+                                    android:text="0" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/assist_content"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="16dp">
+
+                                <TextView
+                                    android:id="@+id/valid_assist"
+                                    style="@style/text_75_f17600"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:gravity="bottom"
+                                    android:text="0" />
+
+                                <TextView
+                                    android:id="@+id/tips_assist"
+                                    style="@style/text_30_848587"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignBottom="@id/valid_assist"
+                                    android:layout_margin="4dp"
+                                    android:layout_toLeftOf="@id/valid_assist"
+                                    android:text="@string/tips_assist" />
+
+                                <TextView
+                                    android:id="@+id/total_assist"
+                                    style="@style/text_30_num"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignBottom="@id/valid_assist"
+                                    android:layout_margin="4dp"
+                                    android:layout_toRightOf="@id/valid_assist"
+                                    android:text="0" />
+                            </RelativeLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/right_argure"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <RelativeLayout
+                                android:id="@+id/scores_content"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingBottom="16dp"
+                                android:paddingRight="16dp"
+                                android:paddingTop="16dp">
+
+                                <TextView
+                                    android:id="@+id/valid_scores"
+                                    style="@style/text_75_f17600"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerHorizontal="true"
+                                    android:gravity="bottom"
+                                    android:text="0" />
+
+                                <TextView
+                                    android:id="@+id/tips_score"
+                                    style="@style/text_30_848587"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignBottom="@id/valid_scores"
+                                    android:layout_margin="4dp"
+                                    android:layout_toLeftOf="@id/valid_scores"
+                                    android:text="@string/tips_goals_in" />
+
+                                <TextView
+                                    android:id="@+id/total_scores"
+                                    style="@style/text_30_num"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignBottom="@id/valid_scores"
+                                    android:layout_margin="4dp"
+                                    android:layout_toRightOf="@id/valid_scores"
+                                    android:text="0" />
+
+                                <TextView
+                                    android:id="@+id/valid_points"
+                                    style="@style/text_75_f17600"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignLeft="@id/valid_scores"
+                                    android:layout_below="@id/valid_scores"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginTop="32dp"
+                                    android:gravity="bottom"
+                                    android:text="0.00"
+
+                                    />
+
+                                <TextView
+                                    android:id="@+id/tips_points"
+                                    style="@style/text_30_848587"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignBottom="@id/valid_points"
+                                    android:layout_margin="4dp"
+                                    android:layout_toLeftOf="@id/valid_points"
+                                    android:text="@string/tips_points" />
+
+                                <View
+                                    android:id="@+id/diviver_two"
+                                    android:layout_width="1px"
+                                    android:layout_height="match_parent"
+                                    android:layout_alignBottom="@id/tips_points"
+                                    android:layout_alignTop="@id/valid_scores"
+                                    android:background="@drawable/diviver_vertical" />
+                            </RelativeLayout>
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <View
+                        android:id="@+id/diviver_three"
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_below="@id/tech_argure"
+                        android:background="@drawable/bg_diviver" />
+
+                    <LinearLayout
+                        android:id="@+id/friend_list_and_nearby"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/diviver_three"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="16dp">
+
+                        <TextView
+                            android:id="@+id/friend_list"
+                            style="@style/text_36_272f38"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="32dp"
+                            android:drawableLeft="@drawable/friend_list"
+                            android:drawablePadding="10dp"
+                            android:gravity="center"
+                            android:text="@string/friend_list" />
+
+                        <TextView
+                            android:id="@+id/near_compe"
+                            style="@style/text_36_272f38"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawableLeft="@drawable/near_compe"
+                            android:drawablePadding="10dp"
+                            android:gravity="center"
+                            android:text="@string/nearby_competiton" />
+                    </LinearLayout>
+
+                    <View
+                        android:id="@+id/diviver_four"
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_below="@id/friend_list_and_nearby"
+                        android:background="@drawable/bg_diviver" />
+
+                    <RelativeLayout
+                        android:id="@+id/zhanji"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/diviver_four">
+
+                        <TextView
+                            android:id="@+id/zhanji_tips"
+                            style="@style/text_28_272f38"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/zhanji_bg"
+                            android:drawableTop="@drawable/zhanji"
+                            android:gravity="center_horizontal"
+                            android:padding="20dp"
+                            android:text="@string/zhanji_tips" />
+
+                        <LinearLayout
+                            android:id="@+id/last"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:orientation="vertical"
+                            android:visibility="gone"
+                            android:paddingLeft="16dp"
+                            android:layout_toRightOf="@id/zhanji_tips">
+
+                            <TextView
+                                android:id="@+id/time_compe"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_above="@id/home_team"
+                                android:text="06/25" />
+                            
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:orientation="horizontal">
+                                <TextView
+                                    android:id="@+id/home_team"
+                                    style="@style/text_36_272f38"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:text="球队" />
+
+                                <TextView
+                                    android:id="@+id/vs_points"
+                                    style="@style/text_60_272f38"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:paddingLeft="10dp"
+                                    android:paddingRight="10dp"
+                                    android:layout_toRightOf="@id/home_team"
+                                    android:text="0-0" />
+
+                                <TextView
+                                    android:id="@+id/opponent_team"
+                                    style="@style/text_36_272f38"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:layout_toRightOf="@id/vs_points"
+                                    android:text="球队" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/last_in"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/tips_goals_in" />
+
+                                <TextView
+                                    android:id="@+id/last_in_goals"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="5dp"
+                                    android:background="@drawable/bg_goals_num"
+                                    android:gravity="center"
+                                    android:text="0"
+                                    android:textColor="@color/forget_pwd_tips" />
+
+                                <TextView
+                                    android:id="@+id/last_assist"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="16dp"
+                                    android:text="@string/tips_assist" />
+
+                                <TextView
+                                    android:id="@+id/last_assist_goals"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="5dp"
+                                    android:background="@drawable/bg_goals_num"
+                                    android:gravity="center"
+                                    android:text="0"
+                                    android:textColor="@color/forget_pwd_tips" />
+                                
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/mask_zhanji"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:layout_toRightOf="@id/zhanji_tips">
+
+                            <TextView
+                                android:id="@+id/no_zhanji_tips"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:text="暂无战绩信息" />
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+                    <View
+                        android:id="@+id/diviver_five"
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_below="@id/zhanji"
+                        android:background="@drawable/bg_diviver" />
+
+                    <RelativeLayout
+                        android:id="@+id/saicheng"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/diviver_five">
+
+                        <TextView
+                            android:id="@+id/saicheng_tips"
+                            style="@style/text_28_272f38"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/zhanji_bg"
+                            android:drawableTop="@drawable/saicheng"
+                            android:gravity="center_horizontal"
+                            android:padding="20dp"
+                            android:text="@string/saicheng" />
+
+                        <LinearLayout
+                            android:id="@+id/next"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_centerInParent="true"
+                            android:orientation="vertical"
+                            android:visibility="gone"
+                            android:paddingLeft="16dp"
+                            android:layout_toRightOf="@id/saicheng_tips">
+
+                            <TextView
+                                android:id="@+id/next_time_compe"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="06/25 12:50" />
+
+                            <TextView
+                                android:id="@+id/next_home_team"
+                                style="@style/text_36_272f38"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:paddingTop="10dp"
+                                android:paddingBottom="10dp"
+                                android:text="球队-球队" />
+
+                            <TextView
+                                android:id="@+id/next_site"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:drawableLeft="@drawable/nearby_icon"
+                                android:drawablePadding="4dp"
+                                android:text="地点" />
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/mask_saicheng"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_centerInParent="true"
+                            android:layout_toRightOf="@id/saicheng_tips">
+
+                            <TextView
+                                android:id="@+id/no_saicheng_tips"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:text="暂无赛程信息" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+
+                    <View
+                        android:id="@+id/diviver_six"
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_below="@id/saicheng"
+                        android:background="@drawable/bg_diviver" />
+                </RelativeLayout>
+
+            </ScrollView>
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+        <ViewStub
+            android:id="@+id/settings_menu"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout="@layout/settings_personal" />
+    </FrameLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/rl_ydy"
+            android:visibility="gone"
+            android:background="@color/transparent_background">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/grzx1"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="180dp"
+                android:background="@drawable/grzx2"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="80dp"
+                android:background="@drawable/grzx3"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/iv_i_know"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="50dp"
+                android:background="@drawable/grzx4"/>
+            </RelativeLayout>
+    </RelativeLayout>
+
+</LinearLayout>

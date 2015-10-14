@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EEFFFFFF"
+     >
+    <TextView 
+        android:id="@+id/create_competition"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/text_36_272f38"
+        android:text="创建比赛"
+        android:layout_centerInParent="true"
+        android:drawableTop="@drawable/bg_create_compe"
+        android:drawablePadding="8dp"
+        />
+    
+	<TextView 
+        android:id="@+id/next_competition"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/text_36_272f38"
+        android:text="下一场比赛"
+        android:layout_above="@id/create_competition"
+        android:layout_marginBottom="24dp"
+        android:drawableTop="@drawable/bg_next_compe"
+        android:drawablePadding="8dp"
+        android:layout_centerHorizontal="true"
+        />
+	<TextView 
+        android:id="@+id/create_league"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/text_36_272f38"
+        android:text="创建联赛"
+        android:layout_below="@id/create_competition"
+        android:layout_marginTop="24dp"
+        android:drawableTop="@drawable/bg_create_league"
+        android:drawablePadding="8dp"
+        android:layout_centerHorizontal="true"
+        />
+</RelativeLayout>
