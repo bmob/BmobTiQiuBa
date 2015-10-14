@@ -1,0 +1,14 @@
+function onRequest(request, response, modules) {
+  var mobile = request.body.mobile;
+  if(mobile=='' || mobile==null){
+    response.end("no mobile!");
+  }
+  else{
+    var num = Math.floor(Math.random()*9999)+1000;
+    var number = num.toString();
+    var http = modules.oHttp;
+    http.post('http://www.jianzhou.sh.cn/JianzhouSMSWSServer/http/sendPersonalMessages', {form:{'account':'sdk_tiqiuba','password':'xyxxkj','destMobiles':mobile,'msgContents':'sms'}});
+    response.end(number);
+  }
+
+}                                                                                                                                                                        

@@ -1,0 +1,42 @@
+function onRequest(request, response, modules) {
+    var db = modules.oData;
+    db.findOne({
+        'table':'Tournament',
+        "objectId":request.body.objectId
+    },function(err,data){
+        //将返回结果转换为Json对象
+        var resultObject= JSON.parse(data);
+        
+        if(resultObject.hasOwnProperty("score_h2") && resultObject.hasOwnProperty("score_o") && resultObject.hasOwnProperty("score_h") && resultObject.hasOwnProperty("score_o2") ){
+            
+        }else{
+            response.send("0");
+        }
+        
+        
+        if((resultObject.score_h2 == resultObject.score_o) && (resultObject.score_h == resultObject.score_o2)){
+            //response.send("两队输入的比分一致");
+            //两队输入比分一致时，更新赛事状态为已认证
+            db.update({
+                "table":"Tournament",
+                "objectId":request.body.objectId,
+                "data":{"isVerify":true}
+            },function(err,data){ 
+                response.end("success");
+            });
+        }else{
+            response.send("0");
+        }
+        // response.send(resultObject.score_h+"-"+resultObject.score_o);
+        // 遍历这个Json对象
+        //   for(var results in resultObject){
+        //     var resultArr = resultObject[results];
+        //     // var str =" ";
+        //     // //遍历得到的每行结果
+        //     // for(var oneline in resultArr){
+        //     //   str =str +" " + resultArr[oneline].name;
+        //     // }
+        //     response.send(resultArr);
+        //   }
+    });
+}                                                                                                                                                                                                 

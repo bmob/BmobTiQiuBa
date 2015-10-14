@@ -1,0 +1,246 @@
+function onRequest(request, response, modules) {
+    
+   function datetime_to_unix(datetime){
+        var tmp_datetime = datetime.replace(/:/g,'-');
+        tmp_datetime = tmp_datetime.replace(/ /g,'-');
+        var arr = tmp_datetime.split("-");
+        var now = new Date(Date.UTC(arr[0],arr[1]-1,arr[2],arr[3]-8,arr[4],arr[5]));
+        return parseInt(now.getTime());
+    }
+
+    var db = modules.oData;
+    var rel = modules.oRelation;
+
+    var teamArr = '';
+
+    db.find({
+        'table':'Team'
+    },function(err,data){
+        var teamObject =  JSON.parse(data);
+
+        //遍历各个联赛
+        for(var team in teamObject)
+        {
+            var teamArr = teamObject[team];
+            for(var oneline in teamArr){
+                var teamId = teamArr[oneline].objectId;
+
+                (function(teamId){
+                    rel.query({
+                        "table":"Tournament",
+                        "where":{"home_court":{"__type":"Pointer","className":"Team","objectId":teamId}}
+//                        "include":'competition'
+                    },function(err,data){
+                        //将返回结果转换为Json对象
+                        var tournamentObject = JSON.parse(data);
+
+                        for(var tournament in tournamentObject)
+                        {
+                            //找到某个球员在其参与的所有赛的数据
+                            var tournamentArr = tournamentObject[tournament];
+
+                            var win = 0;
+                            var draw = 0;
+                            var loss = 0;
+                            var goals = 0;
+                            var goals_against = 0;
+                            var goal_difference = 0;
+                            var appearancesTotal = 0;
+                            var appearances = 0;
+                            var winTotal = 0;
+                            var drawTotal = 0;
+                            var lossTotal = 0;
+                            var goalsTotal = 0;
+                            var goalsAgainstTotal = 0;
+                            var goalDifferenceTotal = 0;
+
+                            for(var oneline in tournamentArr){
+
+                                if(typeof tournamentArr[oneline].start_time != 'undefined'){
+                                    var start_time = tournamentArr[oneline].start_time;
+
+                                    for(var i in start_time){
+                                        if(i == 'iso'){
+                                            var sT = start_time[i];
+                                        }
+                                    }
+                                    var  gameStartTime = datetime_to_unix(sT);
+                                    var  now = new Date().getTime();
+
+                                    if(now > gameStartTime){
+                                        appearancesTotal++
+                                        var homeDiffScore = 0;
+                                        var hHomeScore = 0;
+                                        var hOpponentScore = 0;
+                                        // if(typeof tournamentArr[oneline].score_h != 'undefined' && !isNaN(tournamentArr[oneline].score_h)){
+                                        //     hHomeScore = Number(tournamentArr[oneline].score_h);
+                                        // }
+                                        if(tournamentArr[oneline].hasOwnProperty("score_h")){
+                                            hHomeScore = Number(tournamentArr[oneline].score_h);
+                                        }
+                                        // if(typeof tournamentArr[oneline].score_h2 != 'undefined' && !isNaN(tournamentArr[oneline].score_h2)){
+                                        //     hOpponentScore = Number(tournamentArr[oneline].score_h2);
+                                        // }
+                                        if(tournamentArr[oneline].hasOwnProperty("score_h2")){
+                                            hOpponentScore = Number(tournamentArr[oneline].score_h2);
+                                        }                                        
+                                        homeDiffScore = hHomeScore - hOpponentScore;
+                                        if(homeDiffScore > 0){
+                                            winTotal++;
+                                        }else if(homeDiffScore == 0){
+                                            drawTotal++;
+                                        }else if(homeDiffScore < 0){
+                                            lossTotal++;
+                                        }
+                                        goalsTotal += Number(hHomeScore);
+                                        goalsAgainstTotal += Number(hOpponentScore);
+                                        goalDifferenceTotal += Number(homeDiffScore);
+
+                                        if(typeof tournamentArr[oneline].isVerify != 'undefined' && tournamentArr[oneline].isVerify == true){
+
+                                            appearances++;
+
+                                            if(homeDiffScore > 0){
+                                                win++;
+                                            }else if(homeDiffScore == 0){
+                                                draw++;
+                                            }else if(homeDiffScore < 0){
+                                                loss++;
+                                            }
+                                            goals += Number(hHomeScore);
+                                            goals_against += Number(hOpponentScore);
+                                            goal_difference += Number(homeDiffScore);
+
+                                        }
+                                    }
+                                }
+
+                            }
+
+                            (function(teamId,appearances,win,draw,loss,goals,goals_against,goal_difference,appearancesTotal,winTotal,drawTotal,lossTotal,goalsTotal,goalsAgainstTotal,goalDifferenceTotal){
+
+                                rel.query({
+                                    "table":"Tournament",
+                                    "where":{"opponent":{"__type":"Pointer","className":"Team","objectId":teamId}}
+                                },function(err,data){
+
+                                    var tournamentObject = JSON.parse(data);
+
+                                    for(var tournament in tournamentObject)
+                                    {
+
+                                        //找到某个球员在其参与的所有赛的数据
+                                        var tournamentArr = tournamentObject[tournament];
+
+                                        for(var oneline in tournamentArr){
+
+                                            if(typeof tournamentArr[oneline].start_time != 'undefined'){
+                                                var start_time2 = tournamentArr[oneline].start_time;
+
+                                                for(var i in start_time2){
+                                                    if(i == 'iso'){
+                                                        var sT2 = start_time2[i];
+                                                    }
+                                                }
+                                                var  gameStartTime2 = datetime_to_unix(sT2);
+
+                                                var  now2 = new Date().getTime();
+
+                                                if(now2 > gameStartTime2){
+                                                        appearancesTotal++;
+                                                        var opponentDiffScore = 0;
+                                                        var oHomeScore = 0;
+                                                        var oOpponentScore = 0;
+                                                        // if(typeof tournamentArr[oneline].score_o != 'undefined' && !isNaN(tournamentArr[oneline].score_o)){
+                                                        //     oHomeScore = Number(tournamentArr[oneline].score_o);
+                                                        // }
+                                                        // if(typeof tournamentArr[oneline].score_o2 != 'undefined' && !isNaN(tournamentArr[oneline].score_o2)){
+                                                        //     oOpponentScore = Number(tournamentArr[oneline].score_o2);
+                                                        // }
+                                                        if(tournamentArr[oneline].hasOwnProperty("score_o")){
+                                                            oHomeScore = Number(tournamentArr[oneline].score_o);
+                                                        }
+                                                       
+                                                        if(tournamentArr[oneline].hasOwnProperty("score_o2")){
+                                                            oOpponentScore = Number(tournamentArr[oneline].score_o2);
+                                                        }                                                         
+                                                        opponentDiffScore = oHomeScore - oOpponentScore;
+                                                        if(opponentDiffScore > 0){
+                                                            winTotal++;
+                                                        }else if(opponentDiffScore == 0){
+                                                            drawTotal++;
+                                                        }else if(opponentDiffScore < 0){
+                                                            lossTotal++;
+                                                        }
+                                                        goalsTotal += Number(oHomeScore);
+                                                        goalsAgainstTotal += Number(oOpponentScore);
+                                                        goalDifferenceTotal += Number(opponentDiffScore);
+
+                                                        if(typeof tournamentArr[oneline].isVerify != 'undefined' && tournamentArr[oneline].isVerify == true){
+
+                                                            appearances++;
+
+                                                            if(opponentDiffScore > 0){
+                                                                win++;
+                                                            }else if(opponentDiffScore == 0){
+                                                                draw++;
+                                                            }else if(opponentDiffScore < 0){
+                                                                loss++;
+                                                            }
+                                                            goals += Number(oHomeScore);
+                                                            goals_against += Number(oOpponentScore);
+                                                            goal_difference += Number(opponentDiffScore);
+
+                                                        }
+
+                                                }
+                                            }
+
+                                        }
+
+                                        (function(teamId,appearances,win,draw,loss,goals,goals_against,goal_difference,appearancesTotal,winTotal,drawTotal,lossTotal,goalsTotal,goalsAgainstTotal,goalDifferenceTotal){
+
+                                            // response.end(loss);
+                                            db.update({
+                                                "table":"Team",
+                                                "objectId":teamId,
+                                                "data":{
+                                                    "appearances":Number(appearances),
+                                                    "win":Number(win),
+                                                    "draw":Number(draw),
+                                                    "loss":Number(loss),
+                                                    "goals":Number(goals),
+                                                    "goals_against":Number(goals_against),
+                                                    "goal_difference":Number(goal_difference),
+                                                    "appearancesTotal":Number(appearancesTotal),
+                                                    "winTotal" : Number(winTotal),
+                                                    "drawTotal" : Number(drawTotal),
+                                                    "lossTotal" : Number(lossTotal),
+                                                    "goalsTotal" : Number(goalsTotal),
+                                                    "goalsAgainstTotal" :Number(goalsAgainstTotal),
+                                                    "goalDifferenceTotal" : Number(goalDifferenceTotal)
+                                                }
+                                            },function(err,data){
+                                                response.end(data);
+                                            });
+
+                                        })(teamId,appearances,win,draw,loss,goals,goals_against,goal_difference,appearancesTotal,winTotal,drawTotal,lossTotal,goalsTotal,goalsAgainstTotal,goalDifferenceTotal);
+
+                                    }
+
+                                });
+
+                            })(teamId,appearances,win,draw,loss,goals,goals_against,goal_difference,appearancesTotal,winTotal,drawTotal,lossTotal,goalsTotal,goalsAgainstTotal,goalDifferenceTotal);
+
+                        }
+                    });
+
+                })(teamId);
+
+            }
+
+        }
+
+    });
+}                                                                                                                                                                                                 
+}                                                                                                                                                                                                 

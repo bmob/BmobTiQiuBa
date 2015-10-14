@@ -1,0 +1,160 @@
+function onRequest(request, response, modules) {
+
+    var db = modules.oData;
+    var db = modules.oData;
+    var rel = modules.oRelation;
+
+    var leagueResultArr = '';
+
+    db.find({
+        'table':'LeagueScoreStat'
+    },function(err,data){
+
+        var teamStatObject =  JSON.parse(data);
+
+        //遍历各个联赛
+        for(var teamStat in teamStatObject)
+        {
+//            response.end(teamStatObject);
+            var teamStatArr = teamStatObject[teamStat];
+
+            for(var oneline in teamStatArr){
+                var statTeamId = teamStatArr[oneline].objectId;
+                db.remove({
+                    "table":"LeagueScoreStat",  //表名
+                    "objectId":statTeamId        //记录的objectId
+                },function(err,data){         //回调函数
+
+                });
+            }
+        }
+
+    });
+
+    db.find({
+        'table':'League'
+    },function(err,data){
+
+        //获取所有的联赛
+        var leagueObject =  JSON.parse(data);
+
+        //遍历各个联赛
+        for(var league in leagueObject)
+        {
+            leagueResultArr = leagueObject[league];
+
+            var count = 0;
+            for(var oneline in leagueResultArr){
+                var leagueId= leagueResultArr[oneline].objectId;
+
+                (function(leagueId){
+                    var leagueTeamsObject = '';
+                    var teamScoreObject = '';
+                    //找到联赛的球队
+                    rel.query({
+                        "table":"Team",
+                        "where":{"$relatedTo":{"object":{"__type":"Pointer","className":"League","objectId":leagueId},"key":"teams"}}
+                    },function(err,data){
+
+                        //取得联赛中的所有球队
+                        leagueTeamsObject = JSON.parse(data);
+
+                        //遍历这个Json对象
+                        for(var leagueTeam in leagueTeamsObject)
+                        {
+                            var leagueTeamsResultArr = leagueTeamsObject[leagueTeam];
+
+                            for(var oneline in leagueTeamsResultArr){
+                                //联赛中某支球队的id
+                                var leagueTeamId = leagueTeamsResultArr[oneline].objectId;
+
+                                //找到该联赛某支球队的所有比赛结果
+                                (function(leagueId,leagueTeamId){
+                                    db.find({
+                                        'table':'TeamScore',
+                                        'where':{"league":leagueId,"team":leagueTeamId}
+                                    },function(err,data){
+                                        //将返回结果转换为Json对象
+                                        teamScoreObject  = JSON.parse(data);
+                                        //遍历这个Json对象
+                                        var league = leagueId;
+                                        var groupName = '';
+                                        var team = leagueTeamId;
+                                        var win = 0;
+                                        var draw = 0;
+                                        var loss = 0;
+                                        var goals = 0;
+                                        var goalsAgainst = 0;
+                                        var goalDifference = 0;
+                                        var points = 0;
+
+                                        for(var teamScore in teamScoreObject)
+                                        {
+                                            var teamScoreResultArr = teamScoreObject[teamScore];
+
+                                            for(var oneline in teamScoreResultArr){
+                                                var teamScoreTeamId = teamScoreResultArr[oneline].objectId;
+                                                if((typeof teamScoreResultArr[oneline].win != 'undefined') &&  (teamScoreResultArr[oneline].win == true)){
+                                                    win++;
+                                                }
+                                                if((typeof teamScoreResultArr[oneline].draw != 'undefined') &&  (teamScoreResultArr[oneline].draw == true)){
+                                                    draw++;
+                                                }
+                                                if((typeof teamScoreResultArr[oneline].loss != 'undefined') &&  (teamScoreResultArr[oneline].loss == true)){
+                                                    loss++;
+                                                }
+                                                if((typeof teamScoreResultArr[oneline].goals != 'undefined') &&  !isNaN(goals)){
+                                                    goals += teamScoreResultArr[oneline].goals;
+                                                }
+                                                if((typeof teamScoreResultArr[oneline].goals_against != 'undefined') &&  !isNaN(goals)){
+                                                    goalsAgainst += teamScoreResultArr[oneline].goals_against;
+                                                }
+                                                if((typeof teamScoreResultArr[oneline].goal_difference != 'undefined') &&  !isNaN(goals)){
+                                                    goalDifference += teamScoreResultArr[oneline].goal_difference;
+                                                }
+                                            }
+
+                                        }
+
+                                        //球队在某联赛中的积分
+                                        points = win*3 + draw;
+
+
+                                        (function(league,team,win,draw,loss,goals,goalsAgainst,goalDifference,points){
+                                            db.insert({
+                                                "table":"LeagueScoreStat", //表名
+                                                "data":{
+                                                    "win":win,
+                                                    "draw":draw,
+                                                    "loss":loss,
+                                                    "goals":goals,
+                                                    "goalsAgainst":goalsAgainst,
+                                                    "goalDifference":goalDifference,
+                                                    "points":points,
+                                                    "league":{"__type":"Pointer","className":"League","objectId":league},
+                                                    "team":{"__type":"Pointer","className":"Team","objectId":team}
+                                                }  //需要更新的数据，格式为JSON
+                                            },function(err,data){
+                                                //回调函数
+                                            });
+                                        })(league,team,win,draw,loss,goals,goalsAgainst,goalDifference,points);
+
+                                    });
+                                })(leagueId,leagueTeamId)
+
+                            }
+                        }
+                        //回调函数
+                        //  response.end(leagueTeamsObject);
+
+                    });
+                })(leagueId);
+
+            }
+
+        }
+
+    });
+
+}
+                                                                        

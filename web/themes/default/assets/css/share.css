@@ -1,0 +1,56 @@
+ul{padding: 0px;}
+ul li{list-style-type: none;}
+.logo-banner{background: #e7e8e8;padding: 15px 15px;}
+.logo-banner strong{display: block;font-size: 18px;color: #a8abad;padding-bottom: 10px;}
+.pt10{padding-top: 10px;}
+.pl5{padding-left: 5px;}
+.pr5{padding-right: 5px;}
+.pl0{padding-left: 0px;}
+.p0{padding: 0px;}
+.m0{margin: 0px;}
+.dashed-box-gray-n{display:inline-block;padding: 10px 5px;border: 1px dashed #ccd2d8;line-height: 20px;border-radius: 7px;}
+.dashed-box-gray-n strong{font-size: 22px;}
+.dialog-box-n{margin: 0px;}
+.descript-bold{font-size: 18px;font-weight: bolder;padding: 10px 5px 5px;}
+.size-lg-3x{font-size: 150px;}
+.text-c-y{text-align: center;color: #f47a00;font-size: 18px;margin: 0px;}
+
+.champion-cup{background: #eef0f2;padding: 15px 0;}
+.champion-cup .champion-cup-name{font-size: 18px;font-weight:bolder;display:inline-block;padding-left:10px;font-family: "Microsoft YaHei", "SimSun", Arial, Helvetica, sans-serif;}
+.league-data table td,.league-data table th{text-align: center;}
+.league-data .league-data-title{background: #eaeaeb;padding: 5px 0;text-align: left;text-indent: 10px;}
+.comment-list table td{padding: 10px 0 0;}
+.comment-list table td.comment-list-left{width: 40%;}
+
+.t-cw{color: #ffffff !important;}
+.data-name-num{padding: 10px 20px 10px 20px;}
+.data-name-num ul li{float: left;}
+.data-name-num strong{font-size: 25px;font-weight: bolder;}
+.data-name-num span{font-size: 40px;color: #f37900;font-weight: bolder;padding: 0px 0 0 20px;}
+.p-data-disc{position: absolute;left: 20px;bottom: 10px;width: 100%;}
+.p-data-disc ul li{}
+.p-data-disc ul li p{margin:0px;display: inline-block;}
+.p-data-disc .p-data-disc-t{position: absolute;left: 0px;top:0px;width: 100%;}
+.p-data-disc .p-data-disc-t p{display: inline-block;width: 100%;text-align: center;font-size: 12px;color: #201e1e;}
+.p-data-disc .p-data-disc-t li,.p-data-disc .p-data-disc-t li p{height: 50%;}
+.box-title-l{width: 100%;}
+.box-title-l .box-title{color: #b4b6b8;padding:10px 10px;font-size: 16px;}
+.box-title-l .box-line-p{text-align: center;padding: 10px 0;font-weight: bolder;font-size: 18px;}
+.game-table-line td{border-right: 1px solid #cccccc;width: 33.3%;}
+.box-title-l .box-content{}
+
+
+.content-blue-bg{background: url("../images/blue-gradient-bg.png") center center no-repeat;}
+.game-score-l{width: 100%;text-align: center;font-size: 25px;color: #ffffff;padding-top: 20px;}
+.game-score-l .game-score-l-score{font-size: 40px;color: #f37900;display: inline-block;padding: 0 10px;}
+.game-detail-l{padding: 20px 0 0 0;}
+.game-detail-l .game-detail-l-n{text-align: center;font-size: 20px;color: #6c7176;}
+.game-detail-l .game-detail-l-w{text-align: center;color: #ffffff;font-size: 22px;font-weight: bolder;}
+.range-table-n{width: 100%;height: 300px;padding: 0px 10px}
+.range-table-n table{width: 100%;color: #ffffff;margin: 20px 0 0 0;}
+.range-table-n table td,.range-table-n table th{height: 35px;}
+.range-table-n-playerbg{background:  url("../images/person-football-img.png") center center no-repeat;}
+.range-table-n-playgroundbg{background:  url("../images/playground-line-img.png") center center no-repeat;}
+.title-underline{padding: 10px 0;border-bottom: 1px solid #ffffff;}
+.title-underline strong{color: #ffffff;font-size: 20px;}
+

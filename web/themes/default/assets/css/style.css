@@ -1,0 +1,123 @@
+/* reset bootstrap btn */
+*{border-radius: 0px !important;}
+body{background: #edf0f3;}
+a{cursor: pointer}
+ul{padding-left: 0px !important;}
+ul li {list-style-type: none;}
+.btn-primary{
+    background: #f67c03;
+    border-color: #f67c03;
+    color: #ffffff;
+}
+.btn-primary:hover,.btn-primary:active,.btn-primary:focus{
+    border-color: #fb5301;
+    background: #fb5301;
+    color: #ffffff;
+}
+
+.bg-primary{
+    background: #f67c03;
+}
+
+
+.header{
+    background: #41474e;
+}
+
+.header .navbar {
+    margin-bottom:0px;
+}
+
+.header .navbar .navbar-header{
+    margin-right: 30px;
+}
+
+.header .navbar-default{
+   background:#41474e;
+    border-color: #41474e;
+}
+
+.navbar-default .navbar-toggle, .navbar-default .navbar-toggle {
+    background-color: #dddddd;
+}
+
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+    background-color: #ffffff;
+}
+
+.header .navbar-brand {
+    height: 70px;
+}
+
+.header .navbar-nav li a{
+    display: inline-block;
+    padding-bottom: 25px;
+    padding-top: 25px;
+}
+
+.header .navbar-nav li a i{
+    padding-right: 8px;
+}
+
+.header .navbar-default .navbar-nav  .active  a, .header .navbar-default .navbar-nav  .active  a:hover, .header .navbar-default .navbar-nav  .active  a:focus {
+    background-color: #2b3138;
+    color: #ffffff;
+}
+
+.header .navbar-nav li a:hover{
+    background-color: #2b3138;
+    color: #ffffff;
+}
+
+
+/************************************ self defined **************************************************************/
+.common-content{padding-top: 35px;padding-bottom: 35px;}
+.main-content{padding-right:10px;}
+.sidebar{padding-left:30px;border-left: 1px solid #dbe4de;}
+.sidebar .sidebar-title{font-size: 22px;margin: 0 0 20px 0;display: block;}
+
+.sidebar-p{padding: 20px;background: #f3f5f9;}
+.sidebar-p .team-list{background: #ffffff;border: 1px solid #cfd0d4;}
+.sidebar-p .team-list li{padding: 0px 15px;}
+.sidebar-p .g-name{margin: 20px 0 10px;font-size: 20px;}
+
+.color-success{color: #57bf3b;}
+.color-warning{color: #fe7900;}
+.color-green2{color: #89ac20;}
+
+.cancle-line-top{border-top: none !important;}
+.cancle-line-bottom{border-bottom: none !important;}
+
+table td,table th{text-align: center;padding-top: 4px !important;padding-bottom: 4px !important;}
+table th{color:#888f93;font-weight: normal;}
+
+.table-title{margin-top:10px;padding: 10px 0;}
+.table-title .text-align-block{display: inline-block;margin-top: 17px;}
+.table-title .table-title-name{font-size: 18px;}
+
+.text-tiny-gray{font-size: 12px;color: #888f93;}
+.text-f2x{font-size: 20px;}
+
+.block-title{border-bottom:2px solid #41474e;padding-bottom: 10px;}
+.block-title strong{margin-top: 15px;font-size: 18px;}
+.block-title .menu{margin-top: 15px;}
+.block-title small{font-size: 12px;color: #888f93;display: inline-block;margin-left: 10px;}
+
+.team-vs-block{display: inline-block;padding: 30px;background: #f4f6f7;}
+.common-full-width-btn{padding: 10px 20px !important;text-align: center;font-size: 16px;}
+
+.dashed-btn{border:1px dashed #d9d9d9;padding: 8px 12px;}
+.input-plus-btn{padding-left: 5px;}
+
+.btn-in-input .input-group-addon{padding: 5px 10px;background-color: #ffffff;border-left: none;}
+.btn-in-input{position: relative;}
+.btn-in-input .input-btn{position: absolute;right: 9px;top: 5px;padding:1px 12px; }
+
+.error .form-control {border-color: #b94a48;box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;}
+
+.cut-line{display: inline-block;width: 30px;text-align: center;color: #cad0d3;}
+.valign-cut-line{width:40px;text-align:center;background: url("../images/valign_line_gray.png") 49% 0 repeat-y;}
+.valign-cut-line .line-text-gray{display:inline-block;color:#b2b7bb;margin:25px 10px;padding:3px 0;background-color:#ffffff;font-size: 16px;font-family: "Microsoft YaHei", "SimSun", Arial, Helvetica, sans-serif;}
+
+.vs-icon{display: inline-block;width: 29px;height: 20px;background: url("../images/vs-icon.png") no-repeat;}
+.close-circle-btn{display: inline-block;width: 26px;height: 26px;background: url("../images/close_circle_btn.png") no-repeat;}

@@ -1,0 +1,75 @@
+function onRequest(request, response, modules){
+
+    var db = modules.oData;
+    var gameId = request.body.gameId;
+    var playerId = request.body.playerId;
+
+      if((typeof gameId != 'undefined' && typeof playerId != 'undefined')){
+    
+        db.find({
+            'table':'Comment',
+            "where":{"accept_comm":playerId,"competition":gameId}
+        },function(err,data){
+    
+            var commentObject =  JSON.parse(data);
+    
+            //遍历各个联赛
+            for(var comment in commentObject)
+            {
+                var commentArr = commentObject[comment];
+    
+                var score = 0;
+                var count = 0;
+                var avg = 0;
+                for(var oneline in commentArr){
+                    var commentId = commentArr[oneline].objectId;
+                    count++;
+                    if((typeof commentArr[oneline].score != 'undefined')){
+                        score += commentArr[oneline].score;
+                    }
+                }
+                avg = score/count;
+    
+                (function(avg,gameId,playerId){
+    
+                    db.find({
+                        'table':'PlayerScore',
+                        "where":{"player":playerId,"competition":gameId}
+                    },function(err,data){
+                        var playerScoreObject =  JSON.parse(data);
+    
+                        for(var playerScore in playerScoreObject)
+                        {
+                            var playerScoreArr = playerScoreObject[playerScore];
+                            for(var oneline in playerScoreArr){
+                               var playerScoreId = playerScoreArr[oneline].objectId;
+                                (function(playerScoreId){
+                                    db.update({
+                                        "table":"PlayerScore",
+                                        "objectId":playerScoreId,
+                                        "data":{
+                                            "avg":avg
+                                        }
+                                    },function(err,data){
+                                        response.end('success');
+                                    });
+                                })(playerScoreId);
+    
+                            }
+                        }
+    
+                    });
+    
+                })(avg,gameId,playerId);
+    
+            }
+    
+        });
+      }else{
+        // response.end('参数有问题！'); 
+      }
+
+}
+
+
+                                                                                                                        

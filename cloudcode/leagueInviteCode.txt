@@ -1,0 +1,54 @@
+function onRequest(request, response, modules) {
+    
+    var db = modules.oData;
+    var leagueId = request.body.leagueId;
+
+    var chars = ['0','1','2','3','4','5','6','7','8','9','a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
+
+    function generateMixed(n) {
+        var res = "";
+        for(var i = 0; i < n ; i ++) {
+            var id = Math.ceil(Math.random()*35);
+            res += chars[id];
+        }
+        return res;
+    }
+
+    var invite_code = generateMixed(4);
+
+    var genInviteCode = function(invite_code){
+
+        db.find({
+            'table':'League',
+            'count': 1,
+            "where":{"inviteCode":invite_code}
+        },function(err,data){
+
+            var commentObject = JSON.parse(data);
+            // response.end(data);
+            if(parseInt(commentObject.count) > 0){
+                var invite_code2 = generateMixed(4);
+                genInviteCode(invite_code2);
+            }else{
+
+                (function(){
+
+                    db.update({
+                        "table":"League",
+                        "objectId":leagueId,
+                        "data":{"inviteCode":invite_code}
+                    },function(err,data){
+                        response.end('success');
+                    });
+                })(leagueId,invite_code);
+
+            }
+
+        });
+
+    }
+
+    genInviteCode(invite_code);
+
+
+}                                                 

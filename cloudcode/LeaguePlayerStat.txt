@@ -1,0 +1,109 @@
+function onRequest(request, response, modules) {
+    
+   
+    var db = modules.oData;
+    var rel = modules.oRelation;
+
+
+    db.find({
+        'table':'LeaguePlayerStat'
+    },function(err,data){
+
+        var playerStatObject =  JSON.parse(data);
+
+        //遍历各个联赛
+        for(var playerStat in playerStatObject)
+        {
+//            response.end(teamStatObject);
+            var playerStatArr = playerStatObject[playerStat];
+
+            for(var oneline in playerStatArr){
+                var statTeamId = playerStatArr[oneline].objectId;
+                db.remove({
+                    "table":"LeaguePlayerStat",  //表名
+                    "objectId":statTeamId        //记录的objectId
+                },function(err,data){         //回调函数
+
+                });
+            }
+        }
+
+    });
+
+    var userArr = '';
+
+    db.find({
+        'table':'_User'
+    },function(err,data){
+
+        var userObject =  JSON.parse(data);
+
+        //遍历各个联赛
+        for(var user in userObject)
+        {
+            var userArr = userObject[user];
+            for(var oneline in userArr){
+                var userId = userArr[oneline].objectId;
+
+                (function(userId){
+                    rel.query({
+                        "table":"PlayerScore",
+                        "where":{"player":{"__type":"Pointer","className":"_User","objectId":userId}}
+                    },function(err,data){
+                        //将返回结果转换为Json对象
+                        var userScoreObject = JSON.parse(data);
+
+                        for(var userScore in userScoreObject)
+                        {
+                            //找到某个球员在其参与的所有赛的数据
+                            var userScoreArr = userScoreObject[userScore];
+
+                            var goals = 0;
+                            var assists = 0;
+                            var league = '';
+
+                            for(var oneline in userScoreArr){
+
+                                var teamScoreTeamId = userScoreArr[oneline].objectId;
+                                if(typeof userScoreArr[oneline].objectId  != 'undefined'){
+                                    league = userScoreArr[oneline].objectId;
+                                }
+
+                                if((typeof userScoreArr[oneline].goals != 'undefined') &&  !isNaN(goals)){
+                                    goals += userScoreArr[oneline].goals;
+                                }
+
+                                if((typeof userScoreArr[oneline].assists != 'undefined') &&  !isNaN(assists)){
+                                    assists += userScoreArr[oneline].assists;
+                                }
+
+
+                            }
+
+//                            response.end(goals);
+                            (function(league,userId,goals,assists){
+                                db.insert({
+                                    "table":"LeaguePlayerStat", //表名
+                                    "data":{
+                                        "goals":goals,
+                                        "assists":assists,
+                                        "league":{"__type":"Pointer","className":"League","objectId":league},
+                                        "player":{"__type":"Pointer","className":"_User","objectId":userId}
+                                    }  //需要更新的数据，格式为JSON
+                                },function(err,data){
+                                    //回调函数
+                                    response.end(data);
+                                });
+                            })(league,userId,goals,assists);
+                        }
+                    });
+
+                })(userId);
+
+            }
+
+        }
+
+    });
+
+}                                                                                                 

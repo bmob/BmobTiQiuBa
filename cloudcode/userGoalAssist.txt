@@ -1,0 +1,91 @@
+function onRequest(request, response, modules) {
+    
+    var db = modules.oData;
+    var rel = modules.oRelation;
+
+    db.setHeader({"X-Bmob-Master-Key":"your master key"});
+
+    var userArr = '';
+
+    db.find({
+        'table':'_User'
+    },function(err,data){
+
+        var userObject =  JSON.parse(data);
+
+        //遍历各个联赛
+        for(var user in userObject)
+        {
+
+            var userArr = userObject[user];
+
+            for(var oneline in userArr){
+                var userId = userArr[oneline].objectId;
+
+                (function(userId){
+                    rel.query({
+                        "table":"PlayerScore",
+                        "where":{"player":{"__type":"Pointer","className":"_User","objectId":userId}},
+                        "include":'competition'
+                    },function(err,data){
+                        //将返回结果转换为Json对象
+                        var playerScoreObject = JSON.parse(data);
+
+                        for(var playerScore in playerScoreObject)
+                        {
+                            //找到某个球员在其参与的所有赛的数据
+                            var playerScoreArr = playerScoreObject[playerScore];
+                            var goals = 0;
+                            var assists = 0;
+                            var games = 0;
+                            var goalsTotal = 0;
+                            var assistsTotal = 0;
+                            var gamesTotal = playerScoreArr.length;
+                            for(var oneline in playerScoreArr){
+
+                                if(typeof playerScoreArr[oneline].competition.isVerify != 'undefined' && playerScoreArr[oneline].competition.isVerify == true){
+
+                                    if((typeof playerScoreArr[oneline].goals != 'undefined') &&  !isNaN(goals)){
+                                        goals += playerScoreArr[oneline].goals;
+                                    }
+                                    if((typeof playerScoreArr[oneline].assists != 'undefined') &&  !isNaN(assists)){
+                                        assists += playerScoreArr[oneline].assists;
+                                    }
+
+                                    games++;
+
+                                }
+
+                                if((typeof playerScoreArr[oneline].goals != 'undefined') &&  !isNaN(goals)){
+                                    goalsTotal += playerScoreArr[oneline].goals;
+                                }
+                                if((typeof playerScoreArr[oneline].assists != 'undefined') &&  !isNaN(assists)){
+                                    assistsTotal += playerScoreArr[oneline].assists;
+                                }
+
+                            }
+
+                            (function(userId,gameTimes,goals,assists,gamesTotal,goalsTotal,assistsTotal){
+                                db.update({
+                                    "table":"_User",
+                                    "objectId":userId,
+                                    "data":{"games":games,"goals":goals,"assists":assists,"gamesTotal":gamesTotal,"goalsTotal":goalsTotal,"assistsTotal":assistsTotal}
+                                },function(err,data){
+                                    response.end(data);
+                                });
+                            })(userId,games,goals,assists,gamesTotal,goalsTotal,assistsTotal);
+
+                        }
+                    });
+
+                })(userId);
+
+            }
+        }
+
+    });
+
+
+   
+    
+}                                                                                                                                                                                                                                                                         

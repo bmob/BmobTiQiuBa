@@ -1,0 +1,82 @@
+//用户
+function onRequest(request, response, modules){
+
+    var db = modules.oData;
+    var rel = modules.oRelation;
+
+    db.setHeader({"X-Bmob-Master-Key":"your master key"});
+
+    var userArr = '';
+
+    db.find({
+        'table':'_User',
+    },function(err,data){
+
+        var userObject =  JSON.parse(data);
+
+        //遍历各个联赛
+        for(var user in userObject)
+        {
+            var userArr = userObject[user];
+            for(var oneline in userArr){
+                var userId = userArr[oneline].objectId;
+
+                (function(userId){
+
+                    rel.query({
+                        "table":"PlayerScore",
+                        "where":{"player":{"__type":"Pointer","className":"_User","objectId":userId}}
+                    },function(err,data){
+                        //将返回结果转换为Json对象
+                        var userScoreObject = JSON.parse(data);
+
+//                        response.end(userScoreObject);
+                        for(var userScore in userScoreObject)
+                        {
+
+                            //找到某个球员在其参与的所有赛的数据
+                            var userScoreArr = userScoreObject[userScore];
+
+                            //   response.end(playerScoreArr);
+                            var score = 0;
+                            var count = 0;
+                            for(var oneline in userScoreArr){
+
+                                if((typeof userScoreArr[oneline].avg != 'undefined') && !isNaN(score)){
+                                    score += userScoreArr[oneline].avg;
+                                     count++;
+                                }
+                               
+
+                            }
+                           
+
+                            var averageScore = Number(score)/Number(count);
+                            if(isNaN(averageScore)){
+                                averageScore = 0;
+                            }
+//                            response.end(goals);
+                            (function(userId,averageScore){
+                                db.update({
+                                    "table":"_User",
+                                    "objectId":userId,
+                                    "data":{"score":Math.round(averageScore*100)/100}
+                                },function(err,data){
+                                    response.end('success');
+                                });
+                            })(userId,averageScore);
+                        }
+                    });
+
+                })(userId);
+
+            }
+
+        }
+
+    });
+
+
+}
+
+                                                                                                                                                

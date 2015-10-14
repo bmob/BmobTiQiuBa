@@ -1,0 +1,52 @@
+
+.login-wrap{width: 580px;margin: 0 auto;}
+.login-wrap .logo{display:block;width:327px;margin: 0 auto 50px;}
+.login-form{width:100%;height: 260px;background: #ffffff;position: relative;}
+.login-form .self-login-form{width: 360px;padding: 20px 30px;}
+.login-form .form-title h4{margin-top: 0px;}
+.login-form form{margin-top:20px;}
+.login-form form button{margin: 10px 0;}
+.login-form .qq-login{width: 161px;height: 40px;position: absolute;left: 390px;top: 60px;}
+.login-form .qq-login .qq-login-btn{display:inline-block;width:100%;height:100%;background: url("../images/qq_login.png") no-repeat;}
+.logo-cut-line{position: absolute;top: 55px;left: 340px;}
+
+.team-grouping{margin: 30px 0 0 0;height: 150px;width: 100%;}
+.team-grouping .team-group-team-wrap{width: 100%;height:80px;padding:20px;text-align:left;resize: none;border: 1px solid #cccccc;}
+.team-grouping .team-grouping-title{font-size: 16px;}
+.schedule-wrap{margin-top: 30px;}
+.schedule-wrap ul{padding-left: 0px;}
+.schedule-wrap ul li {list-style-type: none;}
+.team-vs-wrap{padding-top: 30px;}
+.team-vs p,span{display: inline-block;}
+/*.team-vs .team-vs-name{height:30px;}*/
+.team-vs .home-team{padding: 0 10px 0 0;}
+.team-vs .guest-team{padding: 0 0 0 10px;}
+.team-vs .game-location{padding: 0 15px;}
+.team-vs .game-detail{color: #888f93;}
+.team-vs .game-score-sp{display: inline-block;font-size:24px;font-weight: bolder;font-family: "Microsoft YaHei", "SimSun", "Helvetica Neue", Arial, Helvetica, sans-serif;}
+.team-vs .game-score{display: inline-block;font-size:24px;padding:0 20px;font-weight: bolder;font-family: "Microsoft YaHei", "SimSun", "Helvetica Neue", Arial, Helvetica, sans-serif;}
+.team-vs .score-player{font-size: 14px;}
+.team-vs .score-player i{margin: 0 10px 0 0;}
+
+.team-list ul{padding-left: 0px;padding: 20px 0 15px;margin-bottom:0px;border-bottom: 1px dashed #d9d9d9}
+.team-list ul:hover{background: #f4f6f7;}
+.team-list ul li{height: 30px;}
+.team-list ul li .register-status{display: inline-block;margin-left: 10px;color: #888f93;}
+
+.scoreboard-wrap{}
+.scoreboard-wrap ul{padding-left: 0px;}
+.game-resultboard-wrap ul{padding-left: 0px;}
+.shooterboard-block{margin-top: 30px;}
+
+.edit-schedule-block ul{padding-left: 0px;}
+.edit-schedule-block ul li{border:1px dashed #dbe4de;margin-top: 30px;padding: 10px 20px 10px;position: relative;}
+.edit-schedule-block .close-btn{position: absolute;right: -10px;top:-10px;cursor: pointer;}
+.edit-schedule-block table td{width: 50%;}
+
+.league-match-form{background: #ffffff; padding: 30px 60px;}
+
+.invite-team-wrap .form-group{padding-left:0px;}
+.search-result-wrap ul{padding-left:0px;}
+.search-result-wrap ul li {border: 1px solid #dbe4de;padding: 10px;margin: 20px 0 0 0;}
+.search-result-row table{width: 100%;}
+.search-result-block{padding: 20px;border: 1px solid #dbe4de;}

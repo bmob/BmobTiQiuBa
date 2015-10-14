@@ -1,0 +1,85 @@
+@charset "UTF-8";
+/* CSS Document by margie 2015.03.09 */
+
+/*reset*/
+body, div, ol, ul, h1, h2, h3, h4, h5, h6, p, th, td, dl, dd, form, iframe, input, textarea, select, label, article, aside, footer, header, menu, nav, section, time, audio, video { margin: 0; padding: 0; }
+article, aside, footer, header, hgroup, nav, section, audio, canvas, video { display: block; }
+body { font-size: 100%; font-family: "Microsoft YaHei", STHeiti, SimSun, Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif ; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; -webkit-tap-highlight-color: rgba(0,0,0,0); -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
+textarea { resize: none; }
+iframe, img { border: 0; vertical-align: middle; }
+ul, ol { list-style: none; }
+input, select, textarea { outline: 0; -webkit-user-modify: read-write-plaintext-only; }
+input { -webkit-appearance: none; }
+a { text-decoration: none; }
+
+/*screem*/
+body { font-size:16px; line-height:30px; color:#aaaaaa; position:relative; }
+.boxOuter, .header, .nav { width:100%; min-width:1000px; margin:0 auto; padding:0; }
+.boxInner, .pro_Intro { width:1000px; margin:0 auto; }
+.nav { background:url(../images/nav-bg.gif) repeat-x 0 0; height:30px; padding:40px 0; color:#e4e4e4; text-align:center; }
+.nav a { padding:0 45px; color:#e4e4e4; background:#3F424A; border-left:1px solid #e4e4e4; }
+.nav a:hover, .nav a:active { text-decoration:underline; }
+.header { background:url(../images/banner-bg) no-repeat top center; }
+.header .boxInner { height:620px; }
+.pro { float:left; padding-left:58px; }
+.logoTxt { float:right; padding-top:95px; }
+.logoTxt hgroup a { display:block; float:left; margin-right:10px; width:167px; height:41px; line-height:41px; background-color:#f17600; border-radius:3px; color:#fff; }
+.logoTxt hgroup a span { display:block; float:left; width:42px; height:41px; margin-right:15px; border-right:1px solid #d56800; background:url(../images/download.gif) no-repeat #e77201; }
+.logoTxt hgroup a span.iconApple { background-position: center 7px; }
+.logoTxt hgroup a span.iconGoogle { background-position: center -33px; }
+.loginBox { width:451px; height:93px; background-color:#eeeeee; position:absolute; z-index:9999; top:622px; left:50%; margin-left:48px; }
+.loginBox h4 { background-color:#65ae19; padding-left: 10px; color:#fff; font-size:16px; line-height:36px; }
+.btn_Out { padding:10px 0 0 10px; }
+.btn_Out label { display:block; float:left; width:140px; height:37px; padding-right:5px; }
+.btn_Out label input { width:100%; height:100%; border:0; margin:0; font-size:16px; text-indent:0.5em; }
+input.txtBtn { background-color:#fff; text-indent:10px; color:#aaaaaa; }
+input.confirmBtn { background-color:#65ae19; color:#fff; }
+.pro_Intro { padding: 50px 0; overflow:hidden; }
+.pro_Intro .title { text-align:center; }
+.pro_Intro h2 { font-size:16px; color:#505050; padding-bottom:10px; }
+.pro_Intro .title h2 { font-size:30px; line-height:50px; position:relative; }
+.pro_Intro .title h2 span:before, .pro_Intro .title h2 span:after { content:" "; display:block; position:absolute; width:0px; height:0px; border: 17px solid transparent; top:8px; left:50%; }
+.pro_Intro .title h2 span:after { margin-left:170px; border-right:17px solid #f17600; }
+.pro_Intro .title h2 span:before { margin-left:-210px; border-left:17px solid #f17600; }
+.pro_Intro p { line-height:25px; }
+.pro_Intro hr { width:172px; border:1px solid #eee; margin:50px auto; }
+.proPoint { float:left; width:200px; padding-left:85px; padding-right:60px; }
+.proPoint p { font-size:14px; }
+.point01{ background:url(../images/point01.gif) no-repeat 0 0; }
+.point02{ background:url(../images/point02.gif) no-repeat 0 0; }
+.point03 { background:url(../images/point03.gif) no-repeat 0 0; padding-right:0; }
+.aboutus { background-color:#f5f5f5; padding:70px 0; height:391px; }
+.aboutus .boxInner { height:391px; }
+.aboutus span { display:block; float:left; width:413px; }
+.aboutus .boxInner div { width:533px; float:right; }
+.Ltitle { font-size:30px; color:#505050; margin-bottom:20px; }
+.contactUs { padding:100px 0; overflow:hidden; }
+.contactIcon { float:left; background:url(../images/icon01.gif) no-repeat 0 13px; line-height:67px; padding-left:70px; }
+.tcode { float:right; }
+.tcode div { float:left; width:220px; color:#f17600; text-align:center; line-height:40px; padding-left:50px; }
+.footer { background-color:#3f424a; line-height:78px; text-align:center; color:#fff; }
+.errorMessage{font-size: 14px;color: #00007C;position:absolute;right:10px;top:0px;float: right;}
+/*Phone hidden*/
+.handled { display:none; }
+@media screen and (max-device-width: 640px), screen and (max-width: 640px){
+    body { font-size:12px; line-height:20px; }
+    div { box-sizing: border-box; }
+    .screemPC { display:none; }
+    .handled { display:block;}
+    .loginBox1 { background-color:#eeeeee; margin:0 0 5px 0; width:100%; position: relative; }
+    .loginBox1 h4 { background-color:#6ab725; font-size:15px; color:#fff; line-height:45px; padding-left:10px; }
+    .btn_Out1 { padding:10px; }
+    .btn_Out1 label { width:100%; height:40px; display:block; }
+    .btn_Out1 label input { width:100%; height:100%;text-indent: 0.5em; border-top:1px solid #EFECEC; border-right:1px solid #EFECEC; border-left:1px solid #EFECEC; border-bottom:0; font-size:12px; line-height:40px; }
+    .proIntro1, .download, .greenC { padding:0 0 0 5px; }
+    .handled hgroup div { position:relative; }
+    .handled hgroup div p { font-size:12px; line-height:20px; background-color:#f08036; display:none; -webkit-box-align:center; -webkit-box-pack:center; position:absolute; top:0; left:0; text-align:center; box-sizing: border-box; padding: 0 15%; width:100%; height:100%; }
+    .handled hgroup { display:-webkit-box; -webkit-box-orient: horizontal;  }
+    .handled hgroup div { -webkit-box-flex:1; width:50%; margin:5px; background-color:#f08036; color:#fff; text-align:center; }
+    .handled .download hgroup div { background-color:#3f424a; }
+    .handled .greenC hgroup div { background-color:#6ab725; }
+    .handled hgroup div.title { display:-webkit-box; -webkit-box-align:center; -webkit-box-pack:center; font-size:14px; }
+    .handled hgroup div img { width:60.34%; margin-top:15px; }
+    .handled hgroup div span { display:block; padding:10px 0 15px 0; }
+    .footer { line-height:20px; text-align:center; color:#fff; padding:10px 0; }
+}
