@@ -81,3 +81,62 @@ http.post('http://www.jianzhou.sh.cn/JianzhouSMSWSServer/http/sendPersonalMessag
 ```
  db.setHeader({"X-Bmob-Master-Key":"your master key"});
 ```
+
+### iOS相关操作
+
+1. 运行 SportsContact.xcworkspace 运行项目;
+2. 申请百度推送，把key填入BPushConfig.plist文件;
+3. 填入Bmob上应用key;
+4. 填入申请的友盟的key;
+
+```
+-(void)initUmengSDK{
+#warning 输入自己的友盟的key
+    NSString *key = @"";
+    [MobClick startWithAppkey:key reportPolicy:BATCH channelId:nil];
+}
+```
+
+5. 填入申请的sharesdk的key和分享对应平台的key
+
+```
+-(void)initializePlat
+{
+    
+#warning 对应平台的相应信息
+    [ShareSDK registerApp:@""];     //参数为ShareSDK官网中添加应用后得到的AppKey
+
+    [ShareSDK connectQZoneWithAppKey:@""
+                           appSecret:@""
+                   qqApiInterfaceCls:[QQApiInterface class]
+                     tencentOAuthCls:[TencentOAuth class]];
+
+    
+    //添加QQ应用
+    [ShareSDK connectQQWithQZoneAppKey:@""                 //该参数填入申请的QQ AppId
+                     qqApiInterfaceCls:[QQApiInterface class]
+                       tencentOAuthCls:[TencentOAuth class]];
+    
+    
+    
+    //连接短信分享
+    [ShareSDK connectSMS];
+    
+    
+    [ShareSDK connectWeChatWithAppId:@"" wechatCls:[WXApi class]];
+    //wx4f49df1c2cfc15eb
+    
+
+    [ShareSDK connectSinaWeiboWithAppKey:@""
+                               appSecret:@""
+                             redirectUri:@"http://www.bmob.cn"];
+
+    
+    
+    
+    //跳转APP
+    [ShareSDK ssoEnabled:YES];
+}
+```
+
+
